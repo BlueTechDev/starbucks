@@ -64,6 +64,10 @@ function getRandomFood() {
   return `${randomFood}`;
 }
 
+document.getElementById("reset-btn").addEventListener("click", function() {
+  resetOrder(); // Reset the order when the "Reset" button is clicked
+});
+
 function resetOrder() {
   document.getElementById("random-order").textContent = "";
   document.getElementById("randomize-btn").style.display = "block";
@@ -72,7 +76,11 @@ function resetOrder() {
 document.getElementById("randomize-btn").addEventListener("click", function() {
   resetOrder(); // Reset the order before generating a new one
 
-  const randomOrder = `Today's order is a ${getRandomSize()} ${getRandomDrink()} with a ${getRandomFoodOrder()} on the side.`;
+  const size = getRandomSize();
+  const drink = getRandomDrink();
+  const food = getRandomFoodOrder();
+
+  const randomOrder = `Today's order is a ${size} ${drink} with a ${food} on the side.`;
   document.getElementById("randomize-btn").style.display = "none";
   document.getElementById("loading-icon").style.display = "inline-block";
 
@@ -81,8 +89,4 @@ document.getElementById("randomize-btn").addEventListener("click", function() {
     document.getElementById("random-order").textContent = randomOrder;
     document.getElementById("randomize-btn").style.display = "block";
   }, 2000);
-});
-
-document.getElementById("reset-btn").addEventListener("click", function() {
-  resetOrder(); // Reset the order when the "Reset" button is clicked
 });
