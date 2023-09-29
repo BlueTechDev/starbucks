@@ -77,7 +77,7 @@ document.getElementById("randomize-btn").addEventListener("click", function() {
   resetOrder(); // Reset the order before generating a new one
 
   const size = getRandomSize();
-  const drink = getRandomDrink();
+  const drink = getRandomDrink(); // Store the random drink in a variable
   const food = getRandomFoodOrder();
 
   const randomOrder = `Today's order is a ${size} ${drink} with a ${food} on the side.`;
