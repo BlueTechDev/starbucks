@@ -67,4 +67,5 @@ function getRandomDrink() {
       document.getElementById("randomize-btn").addEventListener("click", function() {
         const randomOrder = `Today's order is a ${getRandomSize()} ${getRandomDrink()} with a ${getRandomFoodOrder()} on the side.`;
         document.getElementById("random-order").textContent = randomOrder;
+        document.getElementById("get-recipe-btn").style.display = "block";
       });
