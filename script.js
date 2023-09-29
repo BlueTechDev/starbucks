@@ -64,15 +64,25 @@ function getRandomFood() {
   return `${randomFood}`;
 }
 
+function resetOrder() {
+  document.getElementById("random-order").textContent = "";
+  document.getElementById("randomize-btn").style.display = "block";
+}
+
 document.getElementById("randomize-btn").addEventListener("click", function() {
-  document.getElementById("random-order").textContent = ""; // Clear the previous order text
+  resetOrder(); // Reset the order before generating a new one
+
   const randomOrder = `Today's order is a ${getRandomSize()} ${getRandomDrink()} with a ${getRandomFoodOrder()} on the side.`;
-  document.getElementById("randomize-btn").style.display = "none"; // Hide the "Randomize" button
-  document.getElementById("loading-icon").style.display = "inline-block"; // Show the spinning star
+  document.getElementById("randomize-btn").style.display = "none";
+  document.getElementById("loading-icon").style.display = "inline-block";
 
   setTimeout(() => {
-    document.getElementById("loading-icon").style.display = "none"; // Hide the spinning star
+    document.getElementById("loading-icon").style.display = "none";
     document.getElementById("random-order").textContent = randomOrder;
-    document.getElementById("randomize-btn").style.display = "block"; // Show the "Randomize" button
-  }, 2000); // Delay of 2 seconds (adjust as needed)
+    document.getElementById("randomize-btn").style.display = "block";
+  }, 2000);
+});
+
+document.getElementById("reset-btn").addEventListener("click", function() {
+  resetOrder(); // Reset the order when the "Reset" button is clicked
 });

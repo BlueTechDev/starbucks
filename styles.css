@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Pixelify Sans', cursive;
 }
 
 body {
@@ -78,7 +79,7 @@ h2 {
 }
 
 .loading-icon {
-  color: #ffff00; /* Set the color of the loading icon */
+  color: #000; /* Set the color of the loading icon */
   font-size: 34px; /* Adjust the size of the loading icon */
   animation: spin 2s linear infinite; /* Apply the spinning animation */
 }
@@ -90,6 +91,19 @@ h2 {
   100% {
     transform: rotate(360deg);
   }
+}
+
+#reset-btn {
+  background-color: #00704a;
+  color: #fff;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
 }
 
 footer {
