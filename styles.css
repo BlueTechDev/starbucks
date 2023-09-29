@@ -73,6 +73,10 @@ h2 {
   font-size: 16px;
 }
 
+#loading-icon {
+  display: none; /* Hide the star icon by default */
+}
+
 .loading-icon {
   color: #ffff00; /* Set the color of the loading icon */
   font-size: 34px; /* Adjust the size of the loading icon */
