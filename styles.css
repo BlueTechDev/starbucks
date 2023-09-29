@@ -115,3 +115,8 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+
+footer #disclaimer {
+  font-style: italic;
+  font-size: 8px;
+}
