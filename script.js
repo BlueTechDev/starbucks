@@ -16,6 +16,8 @@ function getRandomDrink() {
     case 3:
       selectedSize = getRandomSize();
       return getRandomRefresher();
+    case 4: selectedSize = getRandomSize();
+      return getRandomFrappucino();
     default:
       return "Unknown category";
 }
@@ -232,6 +234,34 @@ function getRandomRefresher() {
   return `${randomDrink}`;
 }
 
+function getRandomFrappucino() {
+  const frappuccinoOptions= [
+    "Apple Crisp Oatmilk Frappucino Blended Beverage",
+    "Pumpkin Spice Frappucino Blended Beverage",
+    "Mocha Cookie Crumble Frappucino Blended Beverage",
+    "Caramel Ribbon Crunch Frappucino Blended Beverage",
+    "Espresso Frappucino Blended Beverage",
+    "Caffe Vanilla Frappucino Blended Beverage",
+    "Caramel Frappucino Blended Beverage",
+    "Coffee Frappucino Blended Beverage",
+    "Mocha Frappucino Blended Beverage",
+    "Java Chip Frappucino Blended Beverage",
+    "White Chocolate Mocha Frappucino Blended Beverage",
+    "Apple Crisp Oatmilk Creme Frappucino Blended Beverage",
+    "Pumpkin Spice Creme Frappucino Blended Beverage",
+    "Chocolate Cookie Crumble Creme Frappuccino",
+    "Caramel Ribbon Crunch Creme Frappucino Blended Beverage",
+    "Strawberry Creme Frappucino Blended Beverage",
+    "Chai Creme Frappucino Blended Beverage",
+    "Double Chocolaty Chip Creme Frappucino Blended Beverage",
+    "Matcha Creme Frappucino Blended Beverage",
+    "Vanilla Bean Creme Frappucino Blended Beverage",
+    "White Chocolate Creme Frappucino Blended Beverage"
+  ];
+  const randomDrink = frappuccinoOptions[Math.floor(Math.random()*frappuccinoOptions.length)] ;
+  return  ` ${randomDrink}`;
+}
+
 function getRandomFood() {
   const foodOptions = [
    "Bacon, Sausage & Egg Wrap",
@@ -257,7 +287,13 @@ function getRandomFood() {
    "Pumpkin Cream Cheese Muffin",
    "Blueberry Scone",
    "Petite Vanilla Bean Scone",
-   "Blueberry Muffin"
+   "Blueberry Muffin",
+   "Rolled & Steel-cut Oatmeal",
+   "Berry Trio Parfait",
+   "Crispy Grilled Cheese on Sourdough",
+   "Ham & Swiss on Baguette",
+   "Turkey, Provolone & Pesto on Ciabatta",
+   "Tomato & Mozzarella on Focaccia"
   ];
   const randomFood = foodOptions[Math.floor(Math.random() * foodOptions.length)];
   return `${randomFood}`;
