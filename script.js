@@ -5,7 +5,7 @@ function getRandomDrink() {
 
   switch (category) {
     case 0:
-      selectedSize = getRandomSize(); // Store the size when generating a drink
+      selectedSize = getRandomSize(); //Store the size of the random drink
       return getRandomHotDrink();
     case 1:
       selectedSize = getRandomSize();
@@ -17,8 +17,9 @@ function getRandomDrink() {
       selectedSize = getRandomSize();
       return getRandomRefresher();
     default:
-      return "Try Again"
-  }
+      return "Unknown category";
+}
+
 }
 
 document.getElementById("drink-btn").addEventListener("click", function() {
