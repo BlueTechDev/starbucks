@@ -85,35 +85,117 @@ function getRandomSize() {
   return `${randomSize}`;
 }
 
-function getRandomHotDrink() {
-  const hotDrinkOptions = ["Caffè Americano", "Cappuccino", "Caffè Latte", "Caffè Mocha", "Flat White", "Espresso", "Macchiato", "Drip Coffee", "Pour-Over Coffee", "French Press Coffee"];
-  const randomDrink = hotDrinkOptions[Math.floor(Math.random() * hotDrinkOptions.length)];
-  return `${randomDrink}`;
-}
+const hotDrinkOptions = [
+  "Caffè Americano",
+  "Cappuccino",
+  "Caffè Latte",
+  "Caffè Mocha",
+  "Flat White",
+  "Espresso",
+  "Macchiato",
+  "Drip Coffee",
+  "Pour-Over Coffee",
+  "French Press Coffee",
+  "Caffè Americano Misto",
+  "Café Au Lait",
+  "Caffè Misto",
+  "Cinnamon Dolce Latte",
+  "White Chocolate Mocha",
+  "Caramel Macchiato",
+  "Honey Almondmilk Flat White",
+  "Caramel Flan Latte",
+  "Toasted White Chocolate Mocha",
+  "Chestnut Praline Latte"
+];
+
 
 function getRandomColdDrink() {
-  const coldDrinkOptions = ["Iced Coffee", "Cold Brew", "Nitro Cold Brew", "Iced Americano", "Iced Cappuccino", "Iced Latte", "Iced Mocha", "Frappuccino", "Iced Macchiato", "Iced Vanilla Bean Coconutmilk Latte"];
+  const coldDrinkOptions = [
+    "Iced Coffee",
+    "Cold Brew",
+    "Nitro Cold Brew",
+    "Iced Americano",
+    "Iced Cappuccino",
+    "Iced Latte",
+    "Iced Mocha",
+    "Iced Macchiato",
+    "Iced Vanilla Latte"
+  ];
   const randomDrink = coldDrinkOptions[Math.floor(Math.random() * coldDrinkOptions.length)];
   return `${randomDrink}`;
 }
 
-function getRandomTea() {
-  const teaOptions = ["Matcha Green Tea Latte", "Chai Tea Latte", "Iced Passion Tango Tea", "Iced Green Tea", "Iced Black Tea", "London Fog Tea Latte", "White Tea", "Mint Majesty Herbal Tea", "Peach Tranquility Herbal Tea", "Jade Citrus Mint Green Tea"];
-  const randomDrink = teaOptions[Math.floor(Math.random() * teaOptions.length)];
-  return `${randomDrink}`;
-}
+// Tea options
+const teaOptions = [
+  "Matcha Green Tea Latte",
+  "Chai Tea Latte",
+  "Iced Passion Tango Tea",
+  "Iced Green Tea",
+  "Iced Black Tea",
+  "London Fog Tea Latte",
+  "White Tea",
+  "Mint Majesty Herbal Tea",
+  "Peach Tranquility Herbal Tea",
+  "Jade Citrus Mint Green Tea",
+  "Earl Grey Tea Latte",
+  "Royal English Breakfast Tea Latte",
+  "Iced Guava Black Tea",
+  "Iced Guava White Tea Lemonade",
+  "Iced Pineapple Green Tea Infusion",
+  "Iced Peach Green Tea Lemonade",
+  "Iced Blueberry Black Tea Lemonade",
+  "Iced Royal English Breakfast Tea",
+  "Iced London Fog Tea Latte",
+];
 
-function getRandomRefresher() {
-  const refresherOptions = ["Strawberry Acai Refresher", "Mango Dragonfruit Refresher", "Very Berry Hibiscus Refresher", "Pink Drink", "Violet Drink", "Dragon Drink", "Kiwi Starfruit Refresher", "Guava Passionfruit Refresher", "Pineapple Matcha Drink", "Iced Coconutmilk Mojito"];
-  const randomDrink = refresherOptions[Math.floor(Math.random() * refresherOptions.length)];
-  return `${randomDrink}`;
-}
+// Refresher options
+const refresherOptions = [
+  "Strawberry Acai Refresher",
+  "Mango Dragonfruit Refresher",
+  "Very Berry Hibiscus Refresher",
+  "Pink Drink",
+  "Violet Drink",
+  "Dragon Drink",
+  "Kiwi Starfruit Refresher",
+  "Guava Passionfruit Refresher",
+  "Pineapple Matcha Drink",
+  "Iced Coconutmilk Mojito",
+  "Kiwi Starfruit Lemonade Refresher",
+  "Mango Dragonfruit Lemonade Refresher",
+  "Very Berry Hibiscus Lemonade Refresher",
+  "Strawberry Acai Lemonade Refresher",
+  "Dragon Drink Lemonade Refresher",
+  "Mango Passionfruit Lemonade Refresher",
+  "Peach Green Tea Lemonade Refresher",
+  "Pineapple Matcha Lemonade Refresher",
+  "Blackberry Lemonade Refresher",
+  "Iced Guava Passionfruit Refresher",
+];
 
-function getRandomFood() {
-  const foodOptions = ["Bacon & Gouda Artisan Breakfast Sandwich", "Spinach & Feta Breakfast Wrap", "Classic Whole-Grain Oatmeal", "Ham & Swiss Panini", "Turkey & Havarti Sandwich", "Chicken Caprese Sandwich", "Protein Bistro Box", "Egg Salad Sandwich", "Double Chocolate Chunk Brownie", "Blueberry Muffin"];
-  const randomFood = foodOptions[Math.floor(Math.random() * foodOptions.length)];
-  return `${randomFood}`;
-}
+// Food options
+const foodOptions = [
+  "Bacon & Gouda Artisan Breakfast Sandwich",
+  "Spinach & Feta Breakfast Wrap",
+  "Classic Whole-Grain Oatmeal",
+  "Ham & Swiss Panini",
+  "Turkey & Havarti Sandwich",
+  "Chicken Caprese Sandwich",
+  "Protein Bistro Box",
+  "Egg Salad Sandwich",
+  "Double Chocolate Chunk Brownie",
+  "Blueberry Muffin",
+  "Almond Croissant",
+  "Chocolate Croissant",
+  "Cranberry Orange Scone",
+  "Morning Bun",
+  "Ham & Cheddar Croissant",
+  "Everything Bagel",
+  "Cinnamon Raisin Bagel",
+  "Multigrain Bagel",
+  "Plain Bagel",
+  "Butter Croissant",
+];
+
 
 document.getElementById("reset-btn").addEventListener("click", function() {
   resetOrder(); // Reset the order when the "Reset" button is clicked
