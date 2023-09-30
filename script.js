@@ -1,21 +1,70 @@
+let selectedSize = "";
+
 function getRandomDrink() {
   const category = Math.floor(Math.random() * 5);
 
   switch (category) {
     case 0:
-      return getRandomSize();
-    case 1:
+      selectedSize = getRandomSize(); // Store the size when generating a drink
       return getRandomHotDrink();
-    case 2:
+    case 1:
+      selectedSize = getRandomSize();
       return getRandomColdDrink();
-    case 3:
+    case 2:
+      selectedSize = getRandomSize();
       return getRandomTea();
-    case 4:
+    case 3:
+      selectedSize = getRandomSize();
       return getRandomRefresher();
     default:
-      return "Unknown category";
   }
 }
+
+document.getElementById("drink-btn").addEventListener("click", function() {
+  resetOrder()
+  const drink = getRandomDrink();
+
+  // Set the text of drink-btn
+  const randomDrink = `Your drink is a ${selectedSize} ${drink}.`;
+  document.getElementById("randomize-btn").style.display = "none"; // Hide both buttons
+  document.getElementById("drink-btn").style.display = "none"; // Hide both buttons
+  document.getElementById("loading-icon").style.display = "block"; // Show the loading icon
+  
+  setTimeout(() => {
+    document.getElementById("loading-icon").style.display = "none"; // Hide the loading icon
+    document.getElementById("random-drink").textContent = randomDrink;
+    document.getElementById("randomize-btn").style.display = "none";
+    document.getElementById("drink-btn").style.display = "block"; // Show the drink-btn
+
+  }, 2000);
+});
+
+
+function resetOrder() {
+  document.getElementById("random-order").textContent = "";
+  document.getElementById("random-drink").textContent = "";
+  document.getElementById("randomize-btn").style.display = "inline-block";
+  document.getElementById("drink-btn").style.display = "inline-block";
+}
+
+document.getElementById("randomize-btn").addEventListener("click", function() {
+  resetOrder(); // Reset the order before generating a new one
+
+  const drink = getRandomDrink();
+  const food = getRandomFoodOrder();
+
+  const randomOrder = `Today's order is a ${selectedSize} ${drink} with a ${food} on the side.`;
+  document.getElementById("randomize-btn").style.display = "none";
+  document.getElementById("loading-icon").style.display = "inline-block";
+  document.getElementById("drink-btn").style.display = "none"
+
+  setTimeout(() => {
+    document.getElementById("loading-icon").style.display = "none";
+    document.getElementById("random-order").textContent = randomOrder;
+    document.getElementById("randomize-btn").style.display = "block";
+    document.getElementById("drink-btn").style.display = "none";
+  }, 2000);
+});
 
 function getRandomFoodOrder() {
   const category = Math.floor(Math.random() * 1);
@@ -66,27 +115,4 @@ function getRandomFood() {
 
 document.getElementById("reset-btn").addEventListener("click", function() {
   resetOrder(); // Reset the order when the "Reset" button is clicked
-});
-
-function resetOrder() {
-  document.getElementById("random-order").textContent = "";
-  document.getElementById("randomize-btn").style.display = "block";
-}
-
-document.getElementById("randomize-btn").addEventListener("click", function() {
-  resetOrder(); // Reset the order before generating a new one
-
-  const size = getRandomSize();
-  const drink = getRandomDrink(); // Store the random drink in a variable
-  const food = getRandomFoodOrder();
-
-  const randomOrder = `Today's order is a ${size} ${drink} with a ${food} on the side.`;
-  document.getElementById("randomize-btn").style.display = "none";
-  document.getElementById("loading-icon").style.display = "inline-block";
-
-  setTimeout(() => {
-    document.getElementById("loading-icon").style.display = "none";
-    document.getElementById("random-order").textContent = randomOrder;
-    document.getElementById("randomize-btn").style.display = "block";
-  }, 2000);
 });

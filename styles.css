@@ -61,12 +61,22 @@ h2 {
   margin-bottom: 10px;
 }
 
-#random-order {
+#random-order, #random-drink {
   font-size: 26px;
   margin-bottom: 20px;
 }
 
 #randomize-btn {
+  background-color: #00704a;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#drink-btn {
   background-color: #00704a;
   color: #fff;
   padding: 10px 20px;
