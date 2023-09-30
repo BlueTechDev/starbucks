@@ -17,6 +17,7 @@ function getRandomDrink() {
       selectedSize = getRandomSize();
       return getRandomRefresher();
     default:
+      return "Try Again"
   }
 }
 
