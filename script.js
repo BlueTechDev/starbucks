@@ -32,12 +32,14 @@ document.getElementById("drink-btn").addEventListener("click", function() {
   const randomDrink = `Your drink is a ${selectedSize} ${drink}.`;
   document.getElementById("randomize-btn").style.display = "none"; // Hide both buttons
   document.getElementById("drink-btn").style.display = "none"; // Hide both buttons
+  document.getElementById("customize-btn").style.display = "none" // Hide both buttons
   document.getElementById("loading-icon").style.display = "block"; // Show the loading icon
   
   setTimeout(() => {
     document.getElementById("loading-icon").style.display = "none"; // Hide the loading icon
     document.getElementById("random-drink").textContent = randomDrink;
     document.getElementById("randomize-btn").style.display = "none";
+    document.getElementById("customize-btn").style.display = "none" // Hide both buttons
     document.getElementById("drink-btn").style.display = "block"; // Show the drink-btn
 
   }, 2000);
@@ -49,6 +51,9 @@ function resetOrder() {
   document.getElementById("random-drink").textContent = "";
   document.getElementById("randomize-btn").style.display = "inline-block";
   document.getElementById("drink-btn").style.display = "inline-block";
+  document.getElementById("customize-btn").style.display = "inline-block";
+  document.getElementById("hot-btn").style.display = "none"; // Hide the customize button
+  document.getElementById("cold-btn").style.display = "none";
 }
 
 document.getElementById("randomize-btn").addEventListener("click", function() {
@@ -60,15 +65,80 @@ document.getElementById("randomize-btn").addEventListener("click", function() {
   const randomOrder = `Today's order is a ${selectedSize} ${drink} with a ${food} on the side.`;
   document.getElementById("randomize-btn").style.display = "none";
   document.getElementById("loading-icon").style.display = "inline-block";
-  document.getElementById("drink-btn").style.display = "none"
+  document.getElementById("drink-btn").style.display = "none";
+  document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
 
   setTimeout(() => {
     document.getElementById("loading-icon").style.display = "none";
     document.getElementById("random-order").textContent = randomOrder;
     document.getElementById("randomize-btn").style.display = "block";
+    document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
     document.getElementById("drink-btn").style.display = "none";
+
   }, 2000);
 });
+
+let areElementsHidden = true; // Initially, the elements are hidden
+
+document.getElementById("customize-btn").addEventListener("click", function () {
+  resetOrder();
+
+  document.getElementById("randomize-btn").style.display = "none";
+  document.getElementById("loading-icon").style.display = "none";
+  document.getElementById("drink-btn").style.display = "none";
+  document.getElementById("hot-btn").style.display = "inline-block"; // Hide the customize button
+  document.getElementById("cold-btn").style.display = "inline-block";
+});
+
+document.getElementById("hot-btn").addEventListener("click", function(){
+  resetOrder();
+
+  const hotDrink = getRandomHotDrink()
+
+  const yourHotDrink = `Your order is a ${selectedSize} ${hotDrink}`;
+
+  document.getElementById("randomize-btn").style.display = "none";
+  document.getElementById("loading-icon").style.display = "inline-block";
+  document.getElementById("drink-btn").style.display = "none";
+  document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
+  document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
+
+  setTimeout(() => {
+    document.getElementById("loading-icon").style.display = "none";
+    document.getElementById("random-order").textContent = yourHotDrink;
+    document.getElementById("randomize-btn").style.display = "none";
+    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the customize button
+    document.getElementById("drink-btn").style.display = "none";
+    document.getElementById("hot-btn").style.display = "inline-block"; // Show the hot-btn
+
+  }, 2000);
+})
+
+document.getElementById("cold-btn").addEventListener("click", function() {
+  resetOrder();
+
+  const coldDrink = getRandomColdDrink()
+
+  const yourColdDrink = `Your order is a ${selectedSize} ${coldDrink}`;
+  document.getElementById("randomize-btn").style.display = "none";
+  document.getElementById("loading-icon").style.display = "inline-block";
+  document.getElementById("drink-btn").style.display = "none";
+  document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
+  document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
+  document.getElementById("cold-btn").style.display = "none" //Hide the cold-btn
+
+  setTimeout(() => {
+    document.getElementById("loading-icon").style.display = "none";
+    document.getElementById("random-order").textContent = yourColdDrink;
+    document.getElementById("randomize-btn").style.display = "none";
+    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the customize button
+    document.getElementById("drink-btn").style.display = "none";
+    document.getElementById("hot-btn").style.display = "none"; // Show the hot-btn
+    document.getElementById("cold-btn").style.display = "inline-block";
+
+  }, 2000);
+})
+
 
 function getRandomFoodOrder() {
   const category = Math.floor(Math.random() * 1);
@@ -123,7 +193,7 @@ function getRandomHotDrink() {
     "Oleato Caffe Latte with Oatmilk",
     "Cinnamon Dolce Latte",
     "Starbucks Reserve Latte",
-    "Starbucks Rserve Hazelnut Bianco Latte",
+    "Starbucks Reserve Hazelnut Bianco Latte",
     "Starbucks Blone Vanilla Latte",
     "Apple Crisp Oatmilk Macchiato",
     "Caramel Macchiato",
