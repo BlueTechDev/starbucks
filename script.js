@@ -1,5 +1,7 @@
 let selectedSize = "";
 
+document.getElementById("reset-btn").style.display = "none";
+
 function getRandomDrink() {
   const category = Math.floor(Math.random() * 5);
 
@@ -34,14 +36,15 @@ document.getElementById("drink-btn").addEventListener("click", function() {
   document.getElementById("drink-btn").style.display = "none"; // Hide both buttons
   document.getElementById("customize-btn").style.display = "none" // Hide both buttons
   document.getElementById("loading-icon").style.display = "block"; // Show the loading icon
+  document.getElementById("reset-btn").style.display = "none";
   
   setTimeout(() => {
     document.getElementById("loading-icon").style.display = "none"; // Hide the loading icon
     document.getElementById("random-drink").textContent = randomDrink;
     document.getElementById("randomize-btn").style.display = "none";
     document.getElementById("customize-btn").style.display = "none" // Hide both buttons
-    document.getElementById("drink-btn").style.display = "block"; // Show the drink-btn
-
+    document.getElementById("drink-btn").style.display = "inline-block"; // Show the drink-btn
+    document.getElementById("reset-btn").style.display = "inline-block";
   }, 2000);
 });
 
@@ -54,6 +57,7 @@ function resetOrder() {
   document.getElementById("customize-btn").style.display = "inline-block";
   document.getElementById("hot-btn").style.display = "none"; // Hide the customize button
   document.getElementById("cold-btn").style.display = "none";
+  document.getElementById("reset-btn").style.display = "none";
 }
 
 document.getElementById("randomize-btn").addEventListener("click", function() {
@@ -67,18 +71,19 @@ document.getElementById("randomize-btn").addEventListener("click", function() {
   document.getElementById("loading-icon").style.display = "inline-block";
   document.getElementById("drink-btn").style.display = "none";
   document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
+  document.getElementById("reset-btn").style.display = "none";
 
   setTimeout(() => {
     document.getElementById("loading-icon").style.display = "none";
     document.getElementById("random-order").textContent = randomOrder;
-    document.getElementById("randomize-btn").style.display = "block";
+    document.getElementById("randomize-btn").style.display = "inline-block";
     document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
     document.getElementById("drink-btn").style.display = "none";
+    document.getElementById("reset-btn").style.display = "inline-block";
 
   }, 2000);
 });
 
-let areElementsHidden = true; // Initially, the elements are hidden
 
 document.getElementById("customize-btn").addEventListener("click", function () {
   resetOrder();
@@ -138,6 +143,10 @@ document.getElementById("cold-btn").addEventListener("click", function() {
 
   }, 2000);
 })
+
+// Frappucino Method //
+// Refresher Method //
+// Tea Method //
 
 
 function getRandomFoodOrder() {
