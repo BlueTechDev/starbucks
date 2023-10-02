@@ -53,7 +53,7 @@ document.getElementById("drink-btn").addEventListener("click", function() {
 function resetOrder() {
     // Set a default background image before the new one is loaded
     document.body.style.backgroundImage = 'url(/assets/coffee.jpg)';
-    
+
   document.getElementById("random-order").textContent = "";
   document.getElementById("random-drink").textContent = "";
   document.getElementById("randomize-btn").style.display = "inline-block";
@@ -276,15 +276,10 @@ document.getElementById("tea-btn").addEventListener("click", function() {
   }, 2000);
 });
 
-document.getElementById("seasonal-btn").addEventListener("click", function() {
+document.getElementById("seasonal-btn").addEventListener("click", function () {
   resetOrder();
 
   const seasonalItem = getSeasonalItem();
-
-  // Set a default background image before the new one is loaded
-  document.body.style.backgroundImage = 'url(/assets/coffee.jpg)';
-
-  // Rest of your code to update the UI
   const yourSeasonalItem = `Your order is a ${selectedSize} ${seasonalItem}`;
 
   document.getElementById("randomize-btn").style.display = "none";
@@ -301,7 +296,6 @@ document.getElementById("seasonal-btn").addEventListener("click", function() {
 
   setTimeout(() => {
     resetOrder();
-    
     document.getElementById("loading-icon").style.display = "none";
     document.getElementById("random-order").textContent = yourSeasonalItem;
     document.getElementById("randomize-btn").style.display = "none";
@@ -315,7 +309,6 @@ document.getElementById("seasonal-btn").addEventListener("click", function() {
     document.getElementById("reset-btn").style.display = "inline-block";
     document.getElementById("seasonal-btn").style.display = "inline-block";
 
-    // Set the background image after the order is displayed
     const seasonalImages = {
       "Pumpkin Spice Latte": "url(/assets/pumpkin-spice.png)",
       "Pumpkin Cream Cold Brew": "url(/assets/pumpkin-coldbrew.jpg)",
@@ -325,9 +318,23 @@ document.getElementById("seasonal-btn").addEventListener("click", function() {
       "Baked Apple Croissant": "url(/assets/baked-apple.jpg)",
     };
     const backgroundImage = seasonalImages[seasonalItem];
+
+    // Set the background image of the body element
     document.body.style.backgroundImage = backgroundImage;
   }, 2000);
 });
+
+
+// JavaScript code to reset the theme styles
+document.getElementById("reset-btn").addEventListener("click", function () {
+  resetOrder();
+});
+
+// Add an event listener for the reset button
+document.getElementById("reset-btn").addEventListener("click", function () {
+  resetOrder();
+});
+
 
 function getRandomFoodOrder() {
   const category = Math.floor(Math.random() * 1);
