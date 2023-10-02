@@ -310,12 +310,12 @@ document.getElementById("seasonal-btn").addEventListener("click", function () {
     document.getElementById("seasonal-btn").style.display = "inline-block";
 
     const seasonalImages = {
-      "Pumpkin Spice Latte": "url(/assets/pumpkin-spice.png)",
-      "Pumpkin Cream Cold Brew": "url(/assets/pumpkin-coldbrew.jpg)",
-      "Iced Pumpkin Cream Chai tea Latte": "url(/assets/chai-tea.jpg)",
-      "Iced Apple Crisp Oatmilk Shaken Espresso": "url(/assets/iced-apple-crisp.jpg)",
-      "Pumpkin Cream Cheese Muffin": "url(/assets/pumpkin-creamcheese.jpg)",
-      "Baked Apple Croissant": "url(/assets/baked-apple.jpg)",
+      "Pumpkin Spice Latte": "url(/assets/seasonal/pumpkin-spice.png)",
+      "Pumpkin Cream Cold Brew": "url(/assets/seasonal/pumpkin-coldbrew.jpg)",
+      "Iced Pumpkin Cream Chai tea Latte": "url(/assets/seasonal/chai-tea.jpg)",
+      "Iced Apple Crisp Oatmilk Shaken Espresso": "url(/assets/seasonal/iced-apple-crisp.jpg)",
+      "Pumpkin Cream Cheese Muffin": "url(/assets/seasonal/pumpkin-creamcheese.jpg)",
+      "Baked Apple Croissant": "url(/assets/seasonal/baked-apple.jpg)",
     };
     const backgroundImage = seasonalImages[seasonalItem];
 
