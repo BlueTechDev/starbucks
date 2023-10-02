@@ -35,4 +35,41 @@ self.addEventListener('install', (event) => {
     );
   });
   
-  
+  let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (event) => {
+  // Prevent the default browser "Add to Home Screen" prompt
+  event.preventDefault();
+
+  // Stash the event object for later use
+  deferredPrompt = event;
+
+  // Show your custom "Add to Home Screen" button or prompt
+  showInstallPrompt();
+});
+
+function showInstallPrompt() {
+  // Show your custom button or prompt to the user
+  const installButton = document.getElementById('install-button');
+  installButton.style.display = 'block';
+
+  // Handle button click to trigger the "Add to Home Screen" prompt
+  installButton.addEventListener('click', () => {
+    // Show the deferred prompt to the user
+    deferredPrompt.prompt();
+
+    // Wait for the user's response
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        // The user added the app to the home screen
+        console.log('App added to home screen');
+      } else {
+        // The user declined to add the app to the home screen
+        console.log('User declined to add the app to home screen');
+      }
+
+      // Reset the deferred prompt
+      deferredPrompt = null;
+    });
+  });
+}

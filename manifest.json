@@ -5,6 +5,7 @@
     "start_url": "index.html",
     "background_color": "#ffff",
     "theme_color": "#00704a",
+    "display": "standalone",
     "icons": [
       {
         "src": "/assets/starbucks.png",
@@ -55,4 +56,3 @@
       }
     ]
   }
-  
