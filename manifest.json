@@ -1,0 +1,58 @@
+{
+    "name": "Starbucks Randomizer",
+    "short_name": "Randomizer",
+    "description": "Are you feeling adventurous or just can't decide what to order at Starbucks today? Let the Randomizer help you discover something new!",
+    "start_url": "index.html",
+    "background_color": "#00704a",
+    "theme_color": "#00704a",
+    "icons": [
+      {
+        "src": "/assets/starbucks.png",
+        "sizes": "50x50",
+        "type": "image/png"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/assets/seasonal/apple-croissant.jpeg",
+        "sizes": "1408x1200",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "/assets/seasonal/chai-tea.jpg",
+        "sizes": "1408x1200",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "/assets/seasonal/iced-apple-crisp.jpg",
+        "sizes": "1408x1200",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "/assets/seasonal/pumpkin-coldbrew.jpg",
+        "sizes": "1408x1200",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "/assets/seasonal/pumpkin-creamcheese.jpg",
+        "sizes": "1408x1200",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "/assets/seasonal/pumpkin-spice.jpg",
+        "sizes": "1408x1200",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "/assets/seasonal/coffee.jpg",
+        "sizes": "1408x1200",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "/assets/seasonal/starbucks.png",
+        "sizes": "1408x1200",
+        "type": "image/png"
+      }
+    ]
+  }
+  
