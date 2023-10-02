@@ -374,7 +374,6 @@ function getRandomHotDrink() {
     "French Press Coffee",
     "Caffè Americano Misto",
     "Café Au Lait",
-    "Caffè Misto",
     "Cinnamon Dolce Latte",
     "White Chocolate Mocha",
     "Caramel Macchiato",
@@ -382,49 +381,45 @@ function getRandomHotDrink() {
     "Caramel Flan Latte",
     "Toasted White Chocolate Mocha",
     "Chestnut Praline Latte",
-    "Cappuccino",
     "Flat white",
     "Honey Almondmilk Flat White",
     "Pumpkin Spice Latte",
     "Oleato Caffe Latte with Oatmilk",
-    "Cinnamon Dolce Latte",
     "Starbucks Reserve Latte",
     "Starbucks Reserve Hazelnut Bianco Latte",
     "Starbucks Blonde Vanilla Latte",
     "Apple Crisp Oatmilk Macchiato",
-    "Caramel Macchiato",
     "Espresso Macchiato",
     "Caffe Mocha",
     "Starbucks Reserve Dark Chocolate Mocha",
-    "White Chocolate Mocha"
   ];
   const randomDrink = hotDrinkOptions[Math.floor(Math.random() * hotDrinkOptions.length)];
   return `${randomDrink}`;
 }
 
 function getRandomColdDrink() {
-  const coldDrinkOptions = [
+  const icedDrinkOptions = [
     "Iced Coffee",
     "Starbucks Cold Brew Coffee",
     "Starbucks Cold Brew Coffee with Milk",
     "Vanilla Sweet Cream Cold Brew",
-    "Pumkin Cream Cold Brew",
-    "Cinnamon Carmel Cream Cold Brew",
-    "Choclate Cream Cold Brew",
+    "Pumpkin Cream Cold Brew",
+    "Cinnamon Caramel Cream Cold Brew",
+    "Chocolate Cream Cold Brew",
     "Starbucks Reserve Cold Brew",
     "Nitro Cold Brew",
-    "Cinnamon Carmel Cream Nitro Cold Brew",
+    "Cinnamon Caramel Cream Nitro Cold Brew",
     "Starbucks Reserve Nitro Cold Brew",
     "Vanilla Sweet Cream Nitro Cold Brew",
-    "Iced Cofee",
+    "Iced Coffee",
     "Iced Coffee with Milk",
     "Iced Espresso",
     "Iced Apple Crisp Oatmilk Shaken Espresso",
     "Oleato Iced Shaken Espresso with Oatmilk and Toffeenut",
     "Iced Toasted Vanilla Oatmilk Shaken Espresso",
-    "Iced Brown Sugar Oatmilk shaken Espresso",
+    "Iced Brown Sugar Oatmilk Shaken Espresso",
     "Iced Chocolate Almondmilk Shaken Espresso",
-    "Iced Shaken Epresso",
+    "Iced Shaken Espresso",
     "Iced Caffe Americano",
     "Iced Flat White",
     "Iced Honey Almondmilk Flat White",
@@ -442,7 +437,8 @@ function getRandomColdDrink() {
     "Iced Caffe Mocha",
     "Starbucks Reserve Iced Dark Chocolate Mocha"
   ];
-  const randomDrink = coldDrinkOptions[Math.floor(Math.random() * coldDrinkOptions.length)];
+  
+  const randomDrink = icedDrinkOptions[Math.floor(Math.random() * icedDrinkOptions.length)];
   return `${randomDrink}`;
 }
 
@@ -475,8 +471,9 @@ function getRandomTea() {
     "Mint Majesty Tea",
     "Peach Tranquility Herbal Tea",
     "Jade Citrus Mint Tea",
-    "Earl Grey Tea",
+    "Earl Grey Tea"
   ];
+  
   const randomDrink = teaOptions[Math.floor(Math.random() * teaOptions.length)];
   return `${randomDrink}`;
 }
@@ -484,8 +481,8 @@ function getRandomTea() {
 function getRandomRefresher() {
   const refresherOptions = [
     "Strawberry Acai Refresher",
-    "Fronzen Pineapple Passionfruit Lemonade Refresher",
-    "Fronze Strawberry Acai Refresher",
+    "Frozen Pineapple Passionfruit Lemonade Refresher",
+    "Frozen Strawberry Acai Refresher",
     "Frozen Mango Dragonfruit Lemonade Refresher",
     "Paradise Drink Refresher",
     "Pineapple Passionfruit Refresher",
@@ -496,79 +493,87 @@ function getRandomRefresher() {
     "Mango Dragonfruit Refresher",
     "Mango Dragonfruit Lemonade Refresher"
   ];
+  
   const randomDrink = refresherOptions[Math.floor(Math.random() * refresherOptions.length)];
   return `${randomDrink}`;
 }
 
 function getRandomFrappucino() {
-  const frappuccinoOptions= [
-    "Apple Crisp Oatmilk Frappucino Blended Beverage",
-    "Pumpkin Spice Frappucino Blended Beverage",
-    "Mocha Cookie Crumble Frappucino Blended Beverage",
-    "Caramel Ribbon Crunch Frappucino Blended Beverage",
-    "Espresso Frappucino Blended Beverage",
-    "Caffe Vanilla Frappucino Blended Beverage",
-    "Caramel Frappucino Blended Beverage",
-    "Coffee Frappucino Blended Beverage",
-    "Mocha Frappucino Blended Beverage",
-    "Java Chip Frappucino Blended Beverage",
-    "White Chocolate Mocha Frappucino Blended Beverage",
-    "Apple Crisp Oatmilk Creme Frappucino Blended Beverage",
-    "Pumpkin Spice Creme Frappucino Blended Beverage",
+  const frappuccinoOptions = [
+    "Apple Crisp Oatmilk Frappuccino Blended Beverage",
+    "Pumpkin Spice Frappuccino Blended Beverage",
+    "Mocha Cookie Crumble Frappuccino Blended Beverage",
+    "Caramel Ribbon Crunch Frappuccino Blended Beverage",
+    "Espresso Frappuccino Blended Beverage",
+    "Caffe Vanilla Frappuccino Blended Beverage",
+    "Caramel Frappuccino Blended Beverage",
+    "Coffee Frappuccino Blended Beverage",
+    "Mocha Frappuccino Blended Beverage",
+    "Java Chip Frappuccino Blended Beverage",
+    "White Chocolate Mocha Frappuccino Blended Beverage",
+    "Apple Crisp Oatmilk Creme Frappuccino Blended Beverage",
+    "Pumpkin Spice Creme Frappuccino Blended Beverage",
     "Chocolate Cookie Crumble Creme Frappuccino",
-    "Caramel Ribbon Crunch Creme Frappucino Blended Beverage",
-    "Strawberry Creme Frappucino Blended Beverage",
-    "Chai Creme Frappucino Blended Beverage",
-    "Double Chocolaty Chip Creme Frappucino Blended Beverage",
-    "Matcha Creme Frappucino Blended Beverage",
-    "Vanilla Bean Creme Frappucino Blended Beverage",
-    "White Chocolate Creme Frappucino Blended Beverage"
+    "Caramel Ribbon Crunch Creme Frappuccino Blended Beverage",
+    "Strawberry Creme Frappuccino Blended Beverage",
+    "Chai Creme Frappuccino Blended Beverage",
+    "Double Chocolaty Chip Creme Frappuccino Blended Beverage",
+    "Matcha Creme Frappuccino Blended Beverage",
+    "Vanilla Bean Creme Frappuccino Blended Beverage",
+    "White Chocolate Creme Frappuccino Blended Beverage"
   ];
+
   const randomDrink = frappuccinoOptions[Math.floor(Math.random()*frappuccinoOptions.length)] ;
   return  ` ${randomDrink}`;
 }
 
 function getRandomFood() {
   const foodOptions = [
-   "Bacon, Sausage & Egg Wrap",
-   "Impossible Breakfast Sandwich",
-   "Bacon, Gouda & Egg Sandwich",
-   "Double-Smoked Cheddar & Egg Sandwich",
-   "Turkey Bacon, Cheddar & Egg White Sandwich",
-   "Sausage, Cheddar & Egg Sandwich",
-   "Spinach, Feta & Egg White Wrap",
-   "Plain Bagel",
-   "Everything Bagel",
-   "Chocolate Chip Cookie",
-   "Baked Apple Croissant",
-   "Ham & Swiss Croissant",
-   "Butter Croissant",
-   "Chocolate Croissant",
-   "Cinnamon Coffe Cake",
-   "Iced Lemon Loaf",
-   "Pumpkin & Pepita Loaf",
-   "Banana Walnut & Peacan Loaf",
-   "Cheese Danish",
-   "Glazed Doughnut",
-   "Pumpkin Cream Cheese Muffin",
-   "Blueberry Scone",
-   "Petite Vanilla Bean Scone",
-   "Blueberry Muffin",
-   "Rolled & Steel-cut Oatmeal",
-   "Berry Trio Parfait",
-   "Crispy Grilled Cheese on Sourdough",
-   "Ham & Swiss on Baguette",
-   "Turkey, Provolone & Pesto on Ciabatta",
-   "Tomato & Mozzarella on Focaccia"
-  ];
+  "Bacon, Sausage & Egg Wrap",
+  "Impossible Breakfast Sandwich",
+  "Bacon, Gouda & Egg Sandwich",
+  "Double-Smoked Cheddar & Egg Sandwich",
+  "Turkey Bacon, Cheddar & Egg White Sandwich",
+  "Sausage, Cheddar & Egg Sandwich",
+  "Spinach, Feta & Egg White Wrap",
+  "Plain Bagel",
+  "Everything Bagel",
+  "Chocolate Chip Cookie",
+  "Baked Apple Croissant",
+  "Ham & Swiss Croissant",
+  "Butter Croissant",
+  "Chocolate Croissant",
+  "Cinnamon Coffee Cake",
+  "Iced Lemon Loaf",
+  "Pumpkin & Pepita Loaf",
+  "Banana Walnut & Pecan Loaf",
+  "Cheese Danish",
+  "Glazed Doughnut",
+  "Pumpkin Cream Cheese Muffin",
+  "Blueberry Scone",
+  "Petite Vanilla Bean Scone",
+  "Blueberry Muffin",
+  "Rolled & Steel-cut Oatmeal",
+  "Berry Trio Parfait",
+  "Crispy Grilled Cheese on Sourdough",
+  "Ham & Swiss on Baguette",
+  "Turkey, Provolone & Pesto on Ciabatta",
+  "Tomato & Mozzarella on Focaccia"
+];
   const randomFood = foodOptions[Math.floor(Math.random() * foodOptions.length)];
   return `${randomFood}`;
 }
 
 function getSeasonalItem() {
-  const seasonalItem = ["Pumpkin Spice Latte", "Pumpkin Cream Cold Brew", "Iced Apple Crisp Oatmilk Shaken Espresso", "Pumpkin Cream Cheese Muffin", "Baked Apple Croissant"];
+  const seasonalItems = [
+    "Pumpkin Spice Latte",
+    "Pumpkin Cream Cold Brew",
+    "Iced Apple Crisp Oatmilk Shaken Espresso",
+    "Pumpkin Cream Cheese Muffin",
+    "Baked Apple Croissant"
+  ];
 
-  const randomSeasonalItem = seasonalItem[Math.floor(Math.random() * seasonalItem.length)];
+  const randomSeasonalItem = seasonalItems[Math.floor(Math.random() * seasonalItems.length)];
   return `${randomSeasonalItem}`;
 }
 
