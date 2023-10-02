@@ -1,10 +1,10 @@
 {
     "name": "Starbucks Randomizer",
-    "short_name": " Starbucks Randomizer",
+    "short_name": " Starbucks Ra",
     "description": "Are you feeling adventurous or just can't decide what to order at Starbucks today? Let the Randomizer help you discover something new!",
     "start_url": "index.html",
-    "background_color": "#00704a",
-    "theme_color": "#00704a",
+    "background_color": "#fff",
+    "theme_color": "#fff",
     "icons": [
       {
         "src": "/assets/starbucks.png",
