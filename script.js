@@ -3,7 +3,7 @@ let selectedSize = "";
 document.getElementById("reset-btn").style.display = "none";
 
 function getRandomDrink() {
-  const category = Math.floor(Math.random() * 5);
+  const category = Math.floor(Math.random() * 6);
 
   switch (category) {
     case 0:
@@ -20,10 +20,11 @@ function getRandomDrink() {
       return getRandomRefresher();
     case 4: selectedSize = getRandomSize();
       return getRandomFrappucino();
+    case 5: selectedSize = getRandomSize();
+      return getSeasonallItem();
     default:
       return "Unknown category";
 }
-
 }
 
 document.getElementById("drink-btn").addEventListener("click", function() {
@@ -50,6 +51,9 @@ document.getElementById("drink-btn").addEventListener("click", function() {
 
 
 function resetOrder() {
+    // Set a default background image before the new one is loaded
+    document.body.style.backgroundImage = 'url(/assets/coffee.jpg)';
+    
   document.getElementById("random-order").textContent = "";
   document.getElementById("random-drink").textContent = "";
   document.getElementById("randomize-btn").style.display = "inline-block";
@@ -61,6 +65,7 @@ function resetOrder() {
   document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
   document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
   document.getElementById("frappe-btn").style.display = "none"; // Hide the tea-btn
+  document.getElementById("seasonal-btn").style.display = "none"; // Hide the seasonal-btn
 }
 
 document.getElementById("randomize-btn").addEventListener("click", function() {
@@ -100,6 +105,7 @@ document.getElementById("customize-btn").addEventListener("click", function () {
   document.getElementById("tea-btn").style.display = "inline-block";
   document.getElementById("frappe-btn").style.display = "inline-block";
   document.getElementById("reset-btn").style.display = "inline-block";
+  document.getElementById("seasonal-btn").style.display = "inline-block";
 });
 
 //Hot Coffee Method
@@ -270,7 +276,58 @@ document.getElementById("tea-btn").addEventListener("click", function() {
   }, 2000);
 });
 
+document.getElementById("seasonal-btn").addEventListener("click", function() {
+  resetOrder();
 
+  const seasonalItem = getSeasonalItem();
+
+  // Set a default background image before the new one is loaded
+  document.body.style.backgroundImage = 'url(/assets/coffee.jpg)';
+
+  // Rest of your code to update the UI
+  const yourSeasonalItem = `Your order is a ${selectedSize} ${seasonalItem}`;
+
+  document.getElementById("randomize-btn").style.display = "none";
+  document.getElementById("loading-icon").style.display = "inline-block";
+  document.getElementById("drink-btn").style.display = "none";
+  document.getElementById("customize-btn").style.display = "none";
+  document.getElementById("hot-btn").style.display = "none";
+  document.getElementById("cold-btn").style.display = "none";
+  document.getElementById("reset-btn").style.display = "none";
+  document.getElementById("refresh-btn").style.display = "none";
+  document.getElementById("tea-btn").style.display = "none";
+  document.getElementById("frappe-btn").style.display = "none";
+  document.getElementById("seasonal-btn").style.display = "none";
+
+  setTimeout(() => {
+    resetOrder();
+    
+    document.getElementById("loading-icon").style.display = "none";
+    document.getElementById("random-order").textContent = yourSeasonalItem;
+    document.getElementById("randomize-btn").style.display = "none";
+    document.getElementById("customize-btn").style.display = "inline-block";
+    document.getElementById("drink-btn").style.display = "none";
+    document.getElementById("hot-btn").style.display = "none";
+    document.getElementById("refresh-btn").style.display = "none";
+    document.getElementById("tea-btn").style.display = "none";
+    document.getElementById("frappe-btn").style.display = "none";
+    document.getElementById("cold-btn").style.display = "none";
+    document.getElementById("reset-btn").style.display = "inline-block";
+    document.getElementById("seasonal-btn").style.display = "inline-block";
+
+    // Set the background image after the order is displayed
+    const seasonalImages = {
+      "Pumpkin Spice Latte": "url(/assets/pumpkin-spice.png)",
+      "Pumpkin Cream Cold Brew": "url(/assets/pumpkin-coldbrew.jpg)",
+      "Iced Pumpkin Cream Chai tea Latte": "url(/assets/chai-tea.jpg)",
+      "Iced Apple Crisp Oatmilk Shaken Espresso": "url(/assets/iced-apple-crisp.jpg)",
+      "Pumpkin Cream Cheese Muffin": "url(/assets/pumpkin-creamcheese.jpg)",
+      "Baked Apple Croissant": "url(/assets/baked-apple.jpg)",
+    };
+    const backgroundImage = seasonalImages[seasonalItem];
+    document.body.style.backgroundImage = backgroundImage;
+  }, 2000);
+});
 
 function getRandomFoodOrder() {
   const category = Math.floor(Math.random() * 1);
@@ -284,7 +341,7 @@ function getRandomFoodOrder() {
 }
 
 function getRandomSize() {
-  const size = ["Grande", "Vente", "Trenta"];
+  const size = ["Grande", "Venti", "Trenta"];
   const randomSize = size[Math.floor(Math.random() * size.length)];
   return `${randomSize}`;
 }
@@ -501,6 +558,15 @@ function getRandomFood() {
   return `${randomFood}`;
 }
 
+function getSeasonalItem() {
+  const seasonalItem = ["Pumpkin Spice Latte", "Pumpkin Cream Cold Brew", "Iced Apple Crisp Oatmilk Shaken Espresso", "Pumpkin Cream Cheese Muffin", "Baked Apple Croissant"];
+
+  const randomSeasonalItem = seasonalItem[Math.floor(Math.random() * seasonalItem.length)];
+  return `${randomSeasonalItem}`;
+}
+
+
 document.getElementById("reset-btn").addEventListener("click", function() {
   resetOrder(); // Reset the order when the "Reset" button is clicked
 });
+

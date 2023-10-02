@@ -87,7 +87,7 @@ h2 {
   margin-left: 10px; /* Add this line to add some spacing between buttons */
 }
 
-#hot-btn, #cold-btn,#refresh-btn, #tea-btn, #frappe-btn {
+#hot-btn, #cold-btn,#refresh-btn, #tea-btn, #frappe-btn, #seasonal-btn {
   background-color: #00704a;
   color: #fff;
   padding: 10px 15px; /* Reduce padding for smaller width */
@@ -125,7 +125,7 @@ h2 {
 
 
 
-#hot-btn, #cold-btn, #refresh-btn, #tea-btn, #frappe-btn {
+#hot-btn, #cold-btn, #refresh-btn, #tea-btn, #frappe-btn, #seasonal-btn {
   display: none;
 }
 
