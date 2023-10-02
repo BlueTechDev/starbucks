@@ -137,8 +137,8 @@ document.getElementById("hot-btn").addEventListener("click", function(){
     document.getElementById("frappe-btn").style.display = "none"; // Hide the tea-btn
     document.getElementById("hot-btn").style.display = "inline-block"; // Show the hot-btn
     document.getElementById("reset-btn").style.display = "inline-block";
-
   }, 2000);
+
 })
 
 // Cold Coffee Method //
@@ -355,10 +355,10 @@ function getRandomSize() {
 
 function getRandomHotDrink() {
   const hotDrinkOptions = [
-    "Featured Blone Roast",
+    "Featured Blonde Roast",
     "Featured Medium Roast",
     "Featured Dark",
-    "Featured Blone Roast Veranda Blend",
+    "Featured Blonde Roast Veranda Blend",
     "Featured Decaf Roast Decaf",
     "Cafe Misto",
     "Caffè Americano",
@@ -390,7 +390,7 @@ function getRandomHotDrink() {
     "Cinnamon Dolce Latte",
     "Starbucks Reserve Latte",
     "Starbucks Reserve Hazelnut Bianco Latte",
-    "Starbucks Blone Vanilla Latte",
+    "Starbucks Blonde Vanilla Latte",
     "Apple Crisp Oatmilk Macchiato",
     "Caramel Macchiato",
     "Espresso Macchiato",
@@ -435,7 +435,7 @@ function getRandomColdDrink() {
     "Starbucks Reserve Iced Latte",
     "Starbucks Reserve Iced Hazelnut Bianco Latte",
     "Iced Cinnamon Dolce Latte",
-    "Iced Starbucks Blone Vanilla Latte",
+    "Iced Starbucks Blonde Vanilla Latte",
     "Iced Apple Crisp Oatmilk Macchiato",
     "Iced Caramel Macchiato",
     "Iced White Chocolate Mocha",
