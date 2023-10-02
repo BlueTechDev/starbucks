@@ -58,6 +58,9 @@ function resetOrder() {
   document.getElementById("hot-btn").style.display = "none"; // Hide the customize button
   document.getElementById("cold-btn").style.display = "none";
   document.getElementById("reset-btn").style.display = "none";
+  document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
+  document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
+  document.getElementById("frappe-btn").style.display = "none"; // Hide the tea-btn
 }
 
 document.getElementById("randomize-btn").addEventListener("click", function() {
@@ -93,8 +96,13 @@ document.getElementById("customize-btn").addEventListener("click", function () {
   document.getElementById("drink-btn").style.display = "none";
   document.getElementById("hot-btn").style.display = "inline-block"; // Hide the customize button
   document.getElementById("cold-btn").style.display = "inline-block";
+  document.getElementById("refresh-btn").style.display = "inline-block";
+  document.getElementById("tea-btn").style.display = "inline-block";
+  document.getElementById("frappe-btn").style.display = "inline-block";
+  document.getElementById("reset-btn").style.display = "inline-block";
 });
 
+//Hot Coffee Method
 document.getElementById("hot-btn").addEventListener("click", function(){
   resetOrder();
 
@@ -107,6 +115,10 @@ document.getElementById("hot-btn").addEventListener("click", function(){
   document.getElementById("drink-btn").style.display = "none";
   document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
   document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
+  document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
+  document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
+  document.getElementById("frappe-btn").style.display = "none"; // Hide the tea-btn
+  document.getElementById("reset-btn").style.display = "none";
 
   setTimeout(() => {
     document.getElementById("loading-icon").style.display = "none";
@@ -114,11 +126,16 @@ document.getElementById("hot-btn").addEventListener("click", function(){
     document.getElementById("randomize-btn").style.display = "none";
     document.getElementById("customize-btn").style.display = "inline-block"; // Hide the customize button
     document.getElementById("drink-btn").style.display = "none";
+    document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
+    document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
+    document.getElementById("frappe-btn").style.display = "none"; // Hide the tea-btn
     document.getElementById("hot-btn").style.display = "inline-block"; // Show the hot-btn
+    document.getElementById("reset-btn").style.display = "inline-block";
 
   }, 2000);
 })
 
+// Cold Coffee Method //
 document.getElementById("cold-btn").addEventListener("click", function() {
   resetOrder();
 
@@ -131,6 +148,10 @@ document.getElementById("cold-btn").addEventListener("click", function() {
   document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
   document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
   document.getElementById("cold-btn").style.display = "none" //Hide the cold-btn
+  document.getElementById("reset-btn").style.display = "none";
+  document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
+  document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
+  document.getElementById("frappe-btn").style.display = "none"; // Hide the tea-btn
 
   setTimeout(() => {
     document.getElementById("loading-icon").style.display = "none";
@@ -139,14 +160,116 @@ document.getElementById("cold-btn").addEventListener("click", function() {
     document.getElementById("customize-btn").style.display = "inline-block"; // Hide the customize button
     document.getElementById("drink-btn").style.display = "none";
     document.getElementById("hot-btn").style.display = "none"; // Show the hot-btn
+    document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
+    document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
+    document.getElementById("frappe-btn").style.display = "none"; // Hide the tea-btn
     document.getElementById("cold-btn").style.display = "inline-block";
+    document.getElementById("reset-btn").style.display = "inline-block";
 
   }, 2000);
 })
 
 // Frappucino Method //
+document.getElementById("frappe-btn").addEventListener("click", function () {
+  resetOrder();
+  const frappeDrink = getRandomFrappucino();
+
+  const yourFrappeDrink = `Your order is a ${selectedSize} ${frappeDrink}`;
+
+  document.getElementById("randomize-btn").style.display = "none";
+  document.getElementById("loading-icon").style.display = "inline-block";
+  document.getElementById("drink-btn").style.display = "none";
+  document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
+  document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
+  document.getElementById("cold-btn").style.display = "none" //Hide the cold-btn
+  document.getElementById("reset-btn").style.display = "none";
+  document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
+  document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
+
+  setTimeout(() => {
+    document.getElementById("loading-icon").style.display = "none";
+    document.getElementById("random-order").textContent = yourFrappeDrink;
+    document.getElementById("randomize-btn").style.display = "none";
+    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the customize button
+    document.getElementById("drink-btn").style.display = "none";
+    document.getElementById("hot-btn").style.display = "none"; // Show the hot-btn
+    document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
+    document.getElementById("tea-btn").style.display = "none"; // Hide the tea-btn
+    document.getElementById("frappe-btn").style.display = "inline-block"; // Hide the frappe-btn
+    document.getElementById("cold-btn").style.display = "none";
+    document.getElementById("reset-btn").style.display = "inline-block";
+
+  }, 2000);
+})
+
 // Refresher Method //
+document.getElementById("refresh-btn").addEventListener("click", function() {
+  resetOrder();
+
+  const refresherDrink = getRandomRefresher();
+
+  const yourRefresherDrink = `Your order is a ${selectedSize} ${refresherDrink}`;
+
+  document.getElementById("randomize-btn").style.display = "none";
+  document.getElementById("loading-icon").style.display = "inline-block";
+  document.getElementById("drink-btn").style.display = "none";
+  document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
+  document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
+  document.getElementById("cold-btn").style.display = "none" //Hide the cold-btn
+  document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
+  document.getElementById("reset-btn").style.display = "none";
+
+  setTimeout(() => {
+    document.getElementById("loading-icon").style.display = "none";
+    document.getElementById("random-order").textContent = yourRefresherDrink;
+    document.getElementById("randomize-btn").style.display = "none";
+    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the customize button
+    document.getElementById("drink-btn").style.display = "none";
+    document.getElementById("hot-btn").style.display = "none"; // Show the hot-btn
+    document.getElementById("refresh-btn").style.display = "inline-block"; // Hide the refresher-btn
+    document.getElementById("tea-btn").style.display = "none"; // Hide the tea-btn
+    document.getElementById("frappe-btn").style.display = "none"; // Hide the frappe-btn
+    document.getElementById("cold-btn").style.display = "none";
+    document.getElementById("reset-btn").style.display = "inline-block";
+
+  }, 2000);
+})
+
 // Tea Method //
+document.getElementById("tea-btn").addEventListener("click", function() {
+  resetOrder();
+
+  const teaDrink = getRandomTea();
+
+  const yourTeaDrink = `Your order is a ${selectedSize} ${teaDrink}`;
+
+  document.getElementById("randomize-btn").style.display = "none";
+  document.getElementById("loading-icon").style.display = "inline-block";
+  document.getElementById("drink-btn").style.display = "none";
+  document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
+  document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
+  document.getElementById("cold-btn").style.display = "none" //Hide the cold-btn
+  document.getElementById("reset-btn").style.display = "none";
+  document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
+  document.getElementById("tea-btn").style.display = "none"; // Hide the tea-btn
+  document.getElementById("frappe-btn").style.display = "none";
+
+  setTimeout(() => {
+    document.getElementById("loading-icon").style.display = "none";
+    document.getElementById("random-order").textContent = yourTeaDrink;
+    document.getElementById("randomize-btn").style.display = "none";
+    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the customize button
+    document.getElementById("drink-btn").style.display = "none";
+    document.getElementById("hot-btn").style.display = "none"; // Show the hot-btn
+    document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
+    document.getElementById("tea-btn").style.display = "inline-block"; // Hide the tea-btn
+    document.getElementById("frappe-btn").style.display = "none"; // Hide the frappe-btn
+    document.getElementById("cold-btn").style.display = "none";
+    document.getElementById("reset-btn").style.display = "inline-block";
+
+  }, 2000);
+});
+
 
 
 function getRandomFoodOrder() {
