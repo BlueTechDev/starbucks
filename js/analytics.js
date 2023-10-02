@@ -3,7 +3,7 @@
 import { Analytics } from '@vercel/analytics';
 
 const analytics = Analytics({
-  app: 'your-vercel-project-url',
+  app: 'starbucks-mk9lcmctm-bluetechdev.vercel.app',
 });
 
 // Initialize analytics
