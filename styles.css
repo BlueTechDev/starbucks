@@ -76,7 +76,7 @@ h2 {
 }
 
 #randomize-btn,
-#drink-btn, #customize-btn {
+#drink-btn, #customize-btn, #addToHomeScreenButton {
   background-color: #00704a;
   color: #fff;
   padding: 10px 20px;
