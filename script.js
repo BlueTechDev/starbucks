@@ -3,7 +3,7 @@ let selectedSize = "";
 document.getElementById("reset-btn").style.display = "none";
 
 function getRandomDrink() {
-  const category = Math.floor(Math.random() * 6);
+  const category = Math.floor(Math.random() * 5);
 
   switch (category) {
     case 0:
@@ -20,8 +20,6 @@ function getRandomDrink() {
       return getRandomRefresher();
     case 4: selectedSize = getRandomSize();
       return getRandomFrappucino();
-    case 5: selectedSize = getRandomSize();
-      return getSeasonallItem();
     default:
       return "Unknown category";
 }
@@ -315,7 +313,7 @@ document.getElementById("seasonal-btn").addEventListener("click", function () {
       "Iced Pumpkin Cream Chai tea Latte": "url(/assets/seasonal/chai-tea.jpg)",
       "Iced Apple Crisp Oatmilk Shaken Espresso": "url(/assets/seasonal/iced-apple-crisp.jpg)",
       "Pumpkin Cream Cheese Muffin": "url(/assets/seasonal/pumpkin-creamcheese.jpg)",
-      "Baked Apple Croissant": "url(/assets/seasonal/baked-apple.jpg)",
+      "Baked Apple Croissant": "url(/assets/apple-croissant.jpeg)",
     };
     const backgroundImage = seasonalImages[seasonalItem];
 
@@ -566,11 +564,12 @@ function getRandomFood() {
 
 function getSeasonalItem() {
   const seasonalItems = [
+    "Iced Pumpkin Cream Chai tea Latte",
     "Pumpkin Spice Latte",
     "Pumpkin Cream Cold Brew",
     "Iced Apple Crisp Oatmilk Shaken Espresso",
     "Pumpkin Cream Cheese Muffin",
-    "Baked Apple Croissant"
+    "Baked Apple Croissant",
   ];
 
   const randomSeasonalItem = seasonalItems[Math.floor(Math.random() * seasonalItems.length)];
