@@ -315,7 +315,7 @@ document.getElementById("seasonal-btn").addEventListener("click", function () {
       "Iced Pumpkin Cream Chai tea Latte": "url(/assets/seasonal/chai-tea.jpg)",
       "Iced Apple Crisp Oatmilk Shaken Espresso": "url(/assets/seasonal/iced-apple-crisp.jpg)",
       "Pumpkin Cream Cheese Muffin": "url(/assets/seasonal/pumpkin-creamcheese.jpg)",
-      "Baked Apple Croissant": "url(/assets/seasonal/baked-apple.jpg)",
+      "Baked Apple Croissant": "url('/assets/seasonal/baked-apple.jpg')",
     };
     const backgroundImage = seasonalImages[seasonalItem];
 
