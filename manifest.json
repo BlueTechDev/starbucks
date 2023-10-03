@@ -4,7 +4,7 @@
     "description": "Are you feeling adventurous or just can't decide what to order at Starbucks today? Let the Randomizer help you discover something new!",
     "start_url": "index.html",
     "background_color": "#00704a",
-    "theme_color": "#ffff",
+    "theme_color": "#00704a",
     "display": "standalone",
     "icons": [
       {
