@@ -325,25 +325,6 @@ document.getElementById("reset-btn").addEventListener("click", function () {
   resetOrder();
 });
 
-// Modify getRandomHotDrink, getRandomColdDrink, and getRandomFrappucino functions to accept milk as a parameter
-function getRandomHotDrink() {
-  // Randomly select a drink
-  const randomDrink = hotDrinkOptions[Math.floor(Math.random() * hotDrinkOptions.length)];
-  return `${randomDrink} `; // Include the selected milk type in the result
-}
-
-function getRandomColdDrink() {
-  // Randomly select a drink
-  const randomDrink = icedDrinkOptions[Math.floor(Math.random() * icedDrinkOptions.length)];
-  return `${randomDrink}`; // Include the selected milk type in the result
-}
-
-function getRandomFrappucino() {
-  // Randomly select a drink
-  const randomDrink = frappuccinoOptions[Math.floor(Math.random() * frappuccinoOptions.length)];
-  return `${randomDrink}`; // Include the selected milk type in the result
-}
-
 function getRandomFoodOrder() {
   const category = Math.floor(Math.random() * 1);
 
