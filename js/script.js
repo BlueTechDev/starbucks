@@ -1,4 +1,5 @@
 let selectedSize = "";
+let milkChoice = "";
 
 document.getElementById("reset-btn").style.display = "none";
 
@@ -108,7 +109,9 @@ function showCustomizeButtons() {
 document.getElementById("hot-btn").addEventListener("click", function () {
   resetOrder();
   const hotDrink = getRandomHotDrink();
-  const yourHotDrink = `Your order is a ${selectedSize} ${hotDrink}.`;
+  const milkOption = getRandomMilk();
+  const yourHotDrink = `Your order is a ${selectedSize} ${hotDrink} with ${milkOption} if you would like.`;
+
   document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
   document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
   document.getElementById("frappe-btn").style.display = "none"; // Hide the frappe button
@@ -133,7 +136,9 @@ document.getElementById("hot-btn").addEventListener("click", function () {
 document.getElementById("cold-btn").addEventListener("click", function () {
   resetOrder();
   const coldDrink = getRandomColdDrink();
-  const yourColdDrink = `Your order is a ${selectedSize} ${coldDrink}.`;
+  const milkOption = getRandomMilk();
+
+  const yourColdDrink = `Your order is a ${selectedSize} ${coldDrink} with ${milkOption} if you would like.`;
 
   document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
   document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
@@ -159,11 +164,12 @@ document.getElementById("cold-btn").addEventListener("click", function () {
 document.getElementById("frappe-btn").addEventListener("click", function () {
   resetOrder();
   const frappeDrink = getRandomFrappucino();
-  const yourFrappeDrink = `Your order is a ${selectedSize} ${frappeDrink}.`;
+  const milkOption = getRandomMilk();
+
+  const yourFrappeDrink = `Your order is a ${selectedSize} ${frappeDrink} with ${milkOption} if you would like.`;
 
   document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
   document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
-  document.getElementById("frappe-btn").style.display = "none"; // Hide the frappe button
   document.getElementById("tea-btn").style.display = "none"; // Hide the tea button
   document.getElementById("seasonal-btn").style.display = "none"; // Hide the seasonal button
   document.getElementById("customize-btn").style.display = "none"; // Hide the custome button
@@ -175,11 +181,8 @@ document.getElementById("frappe-btn").addEventListener("click", function () {
   setTimeout(() => {
     hideLoadingIcon();
     document.getElementById("random-order").textContent = yourFrappeDrink;
-
-    document.getElementById("random-drink").textContent = frappeDrink;
     document.getElementById("frappe-btn").style.display = "inline-block";
     document.getElementById("customize-btn").style.display = "inline-block"; // Hide the custome button
-    document.getElementById("reset-btn").style.display = "inline-block";
     showResetButton();
   }, 2000);
 });
@@ -294,7 +297,7 @@ function getRandomHotDrink() {
     "Featured Medium Roast",
     "Featured Dark",
     "Featured Blonde Roast Veranda Blend",
-    "Featured Decaf Roast Decaf",
+    "Featured Decaf Roast",
     "Cafe Misto",
     "Caffè Americano",
     "Cappuccino",
@@ -332,6 +335,19 @@ function getRandomHotDrink() {
   return `${randomDrink}`;
 }
 
+function getRandomMilk() {
+  const milk = 
+  ["Whole milk",
+  "non-fat milk",
+  "2% milk",
+  "Soy milk",
+  "Almond milk",
+  "Coconut milk"
+]
+
+const randomMilk = milk[Math.floor(Math.random() * milk.length)];
+return `${randomMilk}`;
+}
 function getRandomColdDrink() {
   const icedDrinkOptions = [
     "Iced Coffee",
