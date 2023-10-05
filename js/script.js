@@ -556,4 +556,3 @@ function clearOrderElements() {
 document.getElementById("reset-btn").addEventListener("click", function() {
   resetOrder(); // Reset the order when the "Reset" button is clicked
 });
-
