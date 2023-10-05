@@ -325,53 +325,23 @@ document.getElementById("reset-btn").addEventListener("click", function () {
   resetOrder();
 });
 
-// Add an event listener for the reset button
-document.getElementById("reset-btn").addEventListener("click", function () {
-  resetOrder();
-});
-
-// Function to generate a random drink considering milk type
-function getRandomDrinkWithMilk() {
-  const category = Math.floor(Math.random() * 5);
-
-  switch (category) {
-    case 0:
-      selectedSize = getRandomSize();
-      return getRandomHotDrink(selectedMilk); // Pass selected milk type to the function
-    case 1:
-      selectedSize = getRandomSize();
-      return getRandomColdDrink(selectedMilk); // Pass selected milk type to the function
-    case 2:
-      selectedSize = getRandomSize();
-      return getRandomTea();
-    case 3:
-      selectedSize = getRandomSize();
-      return getRandomRefresher();
-    case 4:
-      selectedSize = getRandomSize();
-      return getRandomFrappucino(selectedMilk); // Pass selected milk type to the function
-    default:
-      return "Unknown category";
-  }
-}
-
 // Modify getRandomHotDrink, getRandomColdDrink, and getRandomFrappucino functions to accept milk as a parameter
-function getRandomHotDrink(milk) {
+function getRandomHotDrink() {
   // Randomly select a drink
   const randomDrink = hotDrinkOptions[Math.floor(Math.random() * hotDrinkOptions.length)];
   return `${randomDrink} `; // Include the selected milk type in the result
 }
 
-function getRandomColdDrink(milk) {
+function getRandomColdDrink() {
   // Randomly select a drink
   const randomDrink = icedDrinkOptions[Math.floor(Math.random() * icedDrinkOptions.length)];
-  return `${randomDrink} with ${milk} Milk`; // Include the selected milk type in the result
+  return `${randomDrink}`; // Include the selected milk type in the result
 }
 
-function getRandomFrappucino(milk) {
+function getRandomFrappucino() {
   // Randomly select a drink
   const randomDrink = frappuccinoOptions[Math.floor(Math.random() * frappuccinoOptions.length)];
-  return `${randomDrink} with ${milk} Milk`; // Include the selected milk type in the result
+  return `${randomDrink}`; // Include the selected milk type in the result
 }
 
 function getRandomFoodOrder() {
