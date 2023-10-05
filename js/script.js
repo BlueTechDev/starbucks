@@ -1,5 +1,4 @@
 let selectedSize = "";
-let selectedMilk = "Regular"; // Default milk type
 
 document.getElementById("reset-btn").style.display = "none";
 
@@ -110,10 +109,6 @@ document.getElementById("hot-btn").addEventListener("click", function () {
   resetOrder();
 
   const hotDrink = getRandomHotDrink();
-  const milkOptions = [" with whole milk", " with almond milk", " with oat milk"]; // Customize milk options
-
-  // Randomly select a milk option
-  const selectedMilk = milkOptions[Math.floor(Math.random() * milkOptions.length)];
 
   const yourHotDrink = `Your order is a ${selectedSize} ${hotDrink}${selectedMilk}`;
 
@@ -141,83 +136,72 @@ document.getElementById("hot-btn").addEventListener("click", function () {
   }, 2000);
 });
 
-// Cold Coffee Method
-document.getElementById("cold-btn").addEventListener("click", function () {
+// Cold Coffee Method //
+document.getElementById("cold-btn").addEventListener("click", function() {
   resetOrder();
 
-  const coldDrink = getRandomColdDrink();
-  const milkOptions = [" with whole milk", " with almond milk", " with oat milk"]; // Customize milk options
+  const coldDrink = getRandomColdDrink()
 
-  // Randomly select a milk option
-  const selectedMilk = milkOptions[Math.floor(Math.random() * milkOptions.length)];
-
-  const yourColdDrink = `Your order is a ${selectedSize} ${coldDrink}${selectedMilk}`;
-
+  const yourColdDrink = `Your order is a ${selectedSize} ${coldDrink}`;
   document.getElementById("randomize-btn").style.display = "none";
   document.getElementById("loading-icon").style.display = "inline-block";
   document.getElementById("drink-btn").style.display = "none";
   document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
   document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
-  document.getElementById("cold-btn").style.display = "none"; // Hide the cold-btn
+  document.getElementById("cold-btn").style.display = "none" //Hide the cold-btn
   document.getElementById("reset-btn").style.display = "none";
   document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
-  document.getElementById("tea-btn").style.display = "none"; // Hide the frappuccino-btn
+  document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
   document.getElementById("frappe-btn").style.display = "none"; // Hide the tea-btn
 
   setTimeout(() => {
     document.getElementById("loading-icon").style.display = "none";
     document.getElementById("random-order").textContent = yourColdDrink;
     document.getElementById("randomize-btn").style.display = "none";
-    document.getElementById("customize-btn").style.display = "inline-block"; // Show the customize button
+    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the customize button
     document.getElementById("drink-btn").style.display = "none";
-    document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
+    document.getElementById("hot-btn").style.display = "none"; // Show the hot-btn
     document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
-    document.getElementById("tea-btn").style.display = "none"; // Hide the frappuccino-btn
+    document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
     document.getElementById("frappe-btn").style.display = "none"; // Hide the tea-btn
     document.getElementById("cold-btn").style.display = "inline-block";
     document.getElementById("reset-btn").style.display = "inline-block";
 
   }, 2000);
-});
+})
 
-// Frappuccino Method
+// Frappucino Method //
 document.getElementById("frappe-btn").addEventListener("click", function () {
   resetOrder();
-  
-  const frappeDrink = getRandomFrappuccino();
-  const milkOptions = [" with whole milk", " with almond milk", " with oat milk"]; // Customize milk options
+  const frappeDrink = getRandomFrappucino();
 
-  // Randomly select a milk option
-  const selectedMilk = milkOptions[Math.floor(Math.random() * milkOptions.length)];
-
-  const yourFrappeDrink = `Your order is a ${selectedSize} ${frappeDrink}${selectedMilk}`;
+  const yourFrappeDrink = `Your order is a ${selectedSize} ${frappeDrink}`;
 
   document.getElementById("randomize-btn").style.display = "none";
   document.getElementById("loading-icon").style.display = "inline-block";
   document.getElementById("drink-btn").style.display = "none";
   document.getElementById("customize-btn").style.display = "none"; // Hide the customize button
   document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
-  document.getElementById("cold-btn").style.display = "none"; // Hide the cold-btn
+  document.getElementById("cold-btn").style.display = "none" //Hide the cold-btn
   document.getElementById("reset-btn").style.display = "none";
   document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
-  document.getElementById("tea-btn").style.display = "none"; // Hide the tea-btn
+  document.getElementById("tea-btn").style.display = "none"; // Hide the frappucino-btn
 
   setTimeout(() => {
     document.getElementById("loading-icon").style.display = "none";
     document.getElementById("random-order").textContent = yourFrappeDrink;
     document.getElementById("randomize-btn").style.display = "none";
-    document.getElementById("customize-btn").style.display = "inline-block"; // Show the customize button
+    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the customize button
     document.getElementById("drink-btn").style.display = "none";
-    document.getElementById("hot-btn").style.display = "none"; // Hide the hot-btn
+    document.getElementById("hot-btn").style.display = "none"; // Show the hot-btn
     document.getElementById("refresh-btn").style.display = "none"; // Hide the refresher-btn
     document.getElementById("tea-btn").style.display = "none"; // Hide the tea-btn
-    document.getElementById("frappe-btn").style.display = "inline-block"; // Show the frappe-btn
+    document.getElementById("frappe-btn").style.display = "inline-block"; // Hide the frappe-btn
     document.getElementById("cold-btn").style.display = "none";
     document.getElementById("reset-btn").style.display = "inline-block";
 
   }, 2000);
-});
-
+})
 
 // Refresher Method //
 document.getElementById("refresh-btn").addEventListener("click", function() {
@@ -346,85 +330,48 @@ document.getElementById("reset-btn").addEventListener("click", function () {
   resetOrder();
 });
 
-// Render customization options for milk only for certain drink categories
-if (showCustomize) {
+// Function to generate a random drink considering milk type
+function getRandomDrinkWithMilk() {
   const category = Math.floor(Math.random() * 5);
 
-  const customizeDiv = document.createElement("div");
-
-  // Show milk customization for hot, cold, and frappe drinks
-  if (category === 0 || category === 1 || category === 4) {
-    const milkDiv = document.createElement("div");
-    const milkLabel = document.createElement("h3");
-    milkLabel.textContent = "Milk Type:";
-    const milkSelect = document.createElement("select");
-    milkSelect.addEventListener("change", handleMilkTypeChange);
-
-    const regularOption = document.createElement("option");
-    regularOption.value = "Regular";
-    regularOption.textContent = "Regular";
-
-    const almondOption = document.createElement("option");
-    almondOption.value = "Almond";
-    almondOption.textContent = "Almond Milk";
-
-    const soyOption = document.createElement("option");
-    soyOption.value = "Soy";
-    soyOption.textContent = "Soy Milk";
-
-    // Append options to select element
-    milkSelect.appendChild(regularOption);
-    milkSelect.appendChild(almondOption);
-    milkSelect.appendChild(soyOption);
-
-    // Append elements to the DOM
-    milkDiv.appendChild(milkLabel);
-    milkDiv.appendChild(milkSelect);
-    customizeDiv.appendChild(milkDiv);
+  switch (category) {
+    case 0:
+      selectedSize = getRandomSize();
+      return getRandomHotDrink(selectedMilk); // Pass selected milk type to the function
+    case 1:
+      selectedSize = getRandomSize();
+      return getRandomColdDrink(selectedMilk); // Pass selected milk type to the function
+    case 2:
+      selectedSize = getRandomSize();
+      return getRandomTea();
+    case 3:
+      selectedSize = getRandomSize();
+      return getRandomRefresher();
+    case 4:
+      selectedSize = getRandomSize();
+      return getRandomFrappucino(selectedMilk); // Pass selected milk type to the function
+    default:
+      return "Unknown category";
   }
-
-  // Append the customizeDiv to the DOM where you want to display it
-  // For example, if you have a container with the id "customize-container":
-  const customizeContainer = document.getElementById("customize-container");
-  customizeContainer.innerHTML = ""; // Clear existing content
-  customizeContainer.appendChild(customizeDiv);
 }
-
 
 // Modify getRandomHotDrink, getRandomColdDrink, and getRandomFrappucino functions to accept milk as a parameter
 function getRandomHotDrink(milk) {
-  // Hot drink options with customization
-  const hotDrinkOptions = [
-    // ...
-  ];
   // Randomly select a drink
   const randomDrink = hotDrinkOptions[Math.floor(Math.random() * hotDrinkOptions.length)];
-  return `${randomDrink} with ${milk} Milk`; // Include the selected milk type in the result
+  return `${randomDrink} `; // Include the selected milk type in the result
 }
 
 function getRandomColdDrink(milk) {
-  // Cold drink options with customization
-  const icedDrinkOptions = [
-    // ...
-  ];
   // Randomly select a drink
   const randomDrink = icedDrinkOptions[Math.floor(Math.random() * icedDrinkOptions.length)];
   return `${randomDrink} with ${milk} Milk`; // Include the selected milk type in the result
 }
 
 function getRandomFrappucino(milk) {
-  // Frappe drink options with customization
-  const frappuccinoOptions = [
-    // ...
-  ];
   // Randomly select a drink
   const randomDrink = frappuccinoOptions[Math.floor(Math.random() * frappuccinoOptions.length)];
   return `${randomDrink} with ${milk} Milk`; // Include the selected milk type in the result
-}
-
-// Function to handle changes in milk type
-function handleMilkTypeChange(event) {
-  selectedMilk = event.target.value;
 }
 
 function getRandomFoodOrder() {
