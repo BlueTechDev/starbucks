@@ -54,6 +54,12 @@ main {
   align-items: center;
 }
 
+/* Example focus style for buttons */
+button:focus {
+  outline: 2px solid #ff6b00; /* Orange outline */
+}
+
+
 .randomizer-container {
   background-color: #fff;
   border-radius: 10px;
