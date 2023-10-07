@@ -79,3 +79,8 @@ button {
     display: none;
   }
   
+  #typewriter-text {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+  }
