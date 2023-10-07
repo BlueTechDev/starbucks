@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Button click event to start the Starbucks app
   startAppBtn.addEventListener("click", function () {
     // Redirect to the Starbucks app main page or load the main content here
-    window.location.href = "/index.html"; // Replace with your actual Starbucks app URL
+    window.location.href = "/App-page/starbucks-app.html"; // Replace with your actual Starbucks app URL
   });
 });
 

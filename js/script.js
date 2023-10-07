@@ -590,6 +590,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const logoutBtn = document.getElementById("logout-btn");
   logoutBtn.addEventListener("click", function () {
     // Redirect to the portal page (replace 'portal.html' with the actual URL)
-    window.location.href = "/LoadingPage/index.html";
+    window.location.href = "/index.html";
   });
 });
