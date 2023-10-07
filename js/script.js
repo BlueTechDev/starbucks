@@ -34,12 +34,14 @@ document.getElementById("drink-btn").addEventListener("click", function () {
   const randomDrink = `Your drink is a ${selectedSize} ${drink}.`;
   document.getElementById("randomize-btn").style.display = "none";
   document.getElementById("customize-btn").style.display = "none";
+  document.getElementById("logout-btn").style.display = "none"; //hide logout button
   document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
   showLoadingIcon();
 
   setTimeout(() => {
     hideLoadingIcon();
     document.getElementById("random-drink").textContent = randomDrink;
+    document.getElementById("logout-btn").style.display = "none"; //hide logout button
     document.getElementById("drink-btn").style.display = "inline-block";
     document.getElementById("reset-btn").style.display = "inline-block"; // Show the reset button
   }, 2000);
@@ -57,6 +59,7 @@ function resetOrder() {
   document.getElementById("seasonal-btn").style.display = "none"; // Hide the seasonal button
   document.getElementById("customize-btn").style.display = "inline-block"; // Hide the custome button
   document.getElementById("randomize-btn").style.display = "inline-block"; // Hide the random button
+  document.getElementById("logout-btn").style.display = "inline-block"; //hide logout button
   document.getElementById("drink-btn").style.display = "inline-block"; // Hide the drink button
   document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
   document.getElementById("reset-btn").style.display = "none"; // Hide the drink button
@@ -73,6 +76,7 @@ document.getElementById("randomize-btn").addEventListener("click", function () {
   document.getElementById("randomize-btn").style.display = "none";
   document.getElementById("customize-btn").style.display = "none";
   document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
+  document.getElementById("logout-btn").style.display = "none"; // Hide the logout button
   showLoadingIcon();
 
   setTimeout(() => {
@@ -82,9 +86,11 @@ document.getElementById("randomize-btn").addEventListener("click", function () {
     document.getElementById("drink-btn").style.display = "none"; // Show the drink button
     document.getElementById("customize-btn").style.display = "none";
     document.getElementById("reset-btn").style.display = "inline-block"; // Show the reset button
+    document.getElementById("logout-btn").style.display = "none"; // Hide the logout button
     showResetButton();
   }, 2000);
 });
+
 
 
 document.getElementById("customize-btn").addEventListener("click", function () {
@@ -96,6 +102,7 @@ function showCustomizeButtons() {
 
   document.getElementById("randomize-btn").style.display = "none";
   document.getElementById("drink-btn").style.display = "none";
+  document.getElementById("logout-btn").style.display = "none"; //hide logout button
   document.getElementById("hot-btn").style.display = "inline-block";
   document.getElementById("cold-btn").style.display = "inline-block";
   document.getElementById("frappe-btn").style.display = "inline-block";
@@ -121,6 +128,7 @@ document.getElementById("hot-btn").addEventListener("click", function () {
   document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
   document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
   document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
+  document.getElementById("logout-btn").style.display = "none"; //hide logout button
   showLoadingIcon();
 
   setTimeout(() => {
@@ -149,6 +157,7 @@ document.getElementById("cold-btn").addEventListener("click", function () {
   document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
   document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
   document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
+  document.getElementById("logout-btn").style.display = "none"; //hide logout button
   showLoadingIcon();
 
   setTimeout(() => {
@@ -176,6 +185,7 @@ document.getElementById("frappe-btn").addEventListener("click", function () {
   document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
   document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
   document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
+  document.getElementById("logout-btn").style.display = "none"; //hide logout button
   showLoadingIcon();
 
   setTimeout(() => {
@@ -201,6 +211,7 @@ document.getElementById("refresh-btn").addEventListener("click", function () {
   document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
   document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
   document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
+  document.getElementById("logout-btn").style.display = "none"; //hide logout button
   showLoadingIcon();
 
   setTimeout(() => {
@@ -228,6 +239,7 @@ document.getElementById("tea-btn").addEventListener("click", function () {
   document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
   document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
   document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
+  document.getElementById("logout-btn").style.display = "none"; //hide logout button
   showLoadingIcon();
 
   setTimeout(() => {
@@ -255,6 +267,7 @@ document.getElementById("seasonal-btn").addEventListener("click", function () {
   document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
   document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
   document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
+  document.getElementById("logout-btn").style.display = "none"; //hide logout button
   showLoadingIcon();
 
   setTimeout(() => {
@@ -555,4 +568,28 @@ function clearOrderElements() {
 
 document.getElementById("reset-btn").addEventListener("click", function() {
   resetOrder(); // Reset the order when the "Reset" button is clicked
+});
+
+// Function to show the "Log Out" button when appropriate
+function showLogoutButton() {
+  const randomizeBtn = document.getElementById("randomize-btn").style.display;
+  const drinkBtn = document.getElementById("drink-btn").style.display;
+  const customizeBtn = document.getElementById("customize-btn").style.display;
+
+  if (randomizeBtn === "inline-block" || drinkBtn === "inline-block" || customizeBtn === "inline-block") {
+    document.getElementById("logout-btn").style.display = "inline-block";
+  } else {
+    document.getElementById("logout-btn").style.display = "none";
+  }
+}
+
+// Add this code to your existing JavaScript (script.js) file
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Handle the "Log Out" button click event
+  const logoutBtn = document.getElementById("logout-btn");
+  logoutBtn.addEventListener("click", function () {
+    // Redirect to the portal page (replace 'portal.html' with the actual URL)
+    window.location.href = "/LoadingPage/index.html";
+  });
 });

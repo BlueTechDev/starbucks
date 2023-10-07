@@ -101,7 +101,7 @@ h2 {
 #refresh-btn,
 #tea-btn,
 #frappe-btn,
-#seasonal-btn {
+#seasonal-btn, #logout-btn {
   background-color: #ff6b00; /* Orange */
   color: #fff; /* White */
   padding: 10px 15px; /* Reduce padding for smaller width */
