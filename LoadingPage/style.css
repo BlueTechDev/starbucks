@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #FFA500;
   }
   
   .portal-container {
@@ -11,6 +12,11 @@ body {
     height: 100vh;
     background-color: #FFA500; /* Fall orange color */
     overflow: hidden;
+  }
+
+  #typewriter-text {
+    color: #FFA500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   /* Loading bar styles */
