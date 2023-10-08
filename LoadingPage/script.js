@@ -20,8 +20,8 @@
       
           function startLoadingAnimation() {
             let percentage = 0;
-            const intervalDuration = 70; // Duration in milliseconds
-            const totalTime = 7000; // Total time in milliseconds (5 seconds)
+            const intervalDuration = 80; // Duration in milliseconds
+            const totalTime = 8000; // Total time in milliseconds (5 seconds)
             const steps = totalTime / intervalDuration;
       
             const interval = setInterval(function () {
