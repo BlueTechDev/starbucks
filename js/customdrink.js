@@ -136,7 +136,7 @@ const drinks = ["Featured Blonde Roast",
 ]
 
 // Define your API key. Replace 'YOUR_API_KEY' with your actual GPT-3 API key.
-const apiKey = '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';
+const apiKey = '';//Insert your own api key
 
 // Listen for the button click event
 document.getElementById('user-input-btn').addEventListener('click', async () => {
