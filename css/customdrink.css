@@ -1,0 +1,76 @@
+/* Reset some default browser styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the content on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffeeea; /* Light beige background */
+}
+
+/* Style the custom drink card */
+.custom-drink-card {
+    background-color: #fff3e2; /* Light orange */
+    border: 1px solid #d89f47; /* Dark orange */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+}
+
+/* Style the heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #9c6446; /* Brown */
+}
+
+/* Style the description */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #8d8d8d; /* Gray */
+}
+
+/* Style the user input section */
+.user-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 16px;
+    color: #9c6446; /* Brown */
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d89f47; /* Dark orange */
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e25931; /* Reddish orange */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Add some hover effect to the button */
+button:hover {
+    background-color: #c74120; /* Darker reddish orange on hover */
+}

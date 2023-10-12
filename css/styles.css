@@ -101,7 +101,7 @@ h2 {
 #refresh-btn,
 #tea-btn,
 #frappe-btn,
-#seasonal-btn, #logout-btn {
+#seasonal-btn, #logout-btn, #Custom-btn {
   background-color: #ff6b00; /* Orange */
   color: #fff; /* White */
   padding: 10px 15px; /* Reduce padding for smaller width */
@@ -139,12 +139,18 @@ h2 {
   margin-bottom: 10px; /* Add some bottom margin to create vertical spacing */
 }
 
+#Custom-btn a {
+  text-decoration: none;
+  color: #ffff;
+}
+
 #hot-btn,
 #cold-btn,
 #refresh-btn,
 #tea-btn,
 #frappe-btn,
-#seasonal-btn {
+#seasonal-btn,
+#Custom-btn {
   display: none;
 }
 
