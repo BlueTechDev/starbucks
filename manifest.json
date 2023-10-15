@@ -1,6 +1,6 @@
 {
     "name": "Starbucks Randomizer",
-    "short_name": "Randomizer",
+    "short_name": "Starbucks Randomizer",
     "description": "Are you feeling adventurous or just can't decide what to order at Starbucks today? Let the Randomizer help you discover something new!",
     "start_url": "index.html",
     "background_color": "#ff6b00",
@@ -15,12 +15,17 @@
     ],
     "screenshots": [
       {
-        "src": "/assets/seasonal/app-icon.png",
+        "src": "/assets/images/app-icon.png",
         "sizes": "1408x1200",
         "type": "image/png"
       },
       {
-        "src": "/assets/seasonal/starbucks.png",
+        "src": "/assets/images/bg.png",
+        "sizes": "1408x1200",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/images/starbucks.png",
         "sizes": "1408x1200",
         "type": "image/png"
       }
