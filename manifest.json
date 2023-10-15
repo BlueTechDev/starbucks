@@ -8,7 +8,7 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "/assets/coffeecup.png",
+        "src": "assets/images/coffee-cup.png",
         "sizes": "50x50",
         "type": "image/png"
       }
