@@ -1,5 +1,5 @@
 {
-    "name": "Starbucks Randomizer",
+    "name": "SipSurprise",
     "short_name": "SipSurprise",
     "description": "Are you feeling adventurous or just can't decide what to order at Starbucks today? Let the Randomizer help you discover something new!",
     "start_url": "index.html",
@@ -15,42 +15,12 @@
     ],
     "screenshots": [
       {
-        "src": "/assets/seasonal/apple-croissant.jpeg",
+        "src": "/assets/images/app-icon.png",
         "sizes": "1408x1200",
         "type": "image/jpeg"
       },
       {
-        "src": "/assets/seasonal/chai-tea.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/iced-apple-crisp.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/pumpkin-coldbrew.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/pumpkin-creamcheese.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/pumpkin-spice.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/coffee.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/starbucks.png",
+        "src": "/assets/images/starbucks.png",
         "sizes": "1408x1200",
         "type": "image/png"
       }
