@@ -122,7 +122,7 @@ document.getElementById("hot-btn").addEventListener("click", function () {
   resetOrder();
   const hotDrink = getRandomHotDrink();
   const milkOption = getRandomMilk();
-  const yourHotDrink = `Your order is a ${selectedSize} ${hotDrink} with ${milkOption} if you would like.`;
+  const yourHotDrink = `Your order is a ${selectedSize} ${hotDrink} with ${milkOption}`;
 
   document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
   document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
@@ -152,7 +152,7 @@ document.getElementById("cold-btn").addEventListener("click", function () {
   const coldDrink = getRandomColdDrink();
   const milkOption = getRandomMilk();
 
-  const yourColdDrink = `Your order is a ${selectedSize} ${coldDrink} with ${milkOption} if you would like.`;
+  const yourColdDrink = `Your order is a ${selectedSize} ${coldDrink} with ${milkOption}`;
 
   document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
   document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
@@ -182,7 +182,7 @@ document.getElementById("frappe-btn").addEventListener("click", function () {
   const frappeDrink = getRandomFrappucino();
   const milkOption = getRandomMilk();
 
-  const yourFrappeDrink = `Your order is a ${selectedSize} ${frappeDrink} with ${milkOption} if you would like.`;
+  const yourFrappeDrink = `Your order is a ${selectedSize} ${frappeDrink} with ${milkOption}`;
 
   document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
   document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
