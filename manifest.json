@@ -8,11 +8,11 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "/assets/images/coffee-cup.png",
+        "src": "assets/images/app-icon.png",
         "sizes": "50x50",
         "type": "image/png"
       }
-    ],    
+    ],
     "screenshots": [
       {
         "src": "/assets/seasonal/apple-croissant.jpeg",
