@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url(/assets/coffee.jpg);
+  background-image: url(/assets/coffeecup.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,7 +61,7 @@ button:focus {
 
 
 .randomizer-container {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
   text-align: center;

@@ -50,7 +50,7 @@ document.getElementById("drink-btn").addEventListener("click", function () {
 
 
 function resetOrder() {
-  document.body.style.backgroundImage = 'url(/assets/coffee.jpg)';
+  document.body.style.backgroundImage = 'url(/assets/coffeecup.png)';
   clearOrderElements();
   hideAllButtons();
   document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
