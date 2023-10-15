@@ -1,6 +1,6 @@
 {
-    "name": "SipSurprise",
-    "short_name": "Randomizer",
+    "name": "Starbucks Randomizer",
+    "short_name": "SipSurprise",
     "description": "Are you feeling adventurous or just can't decide what to order at Starbucks today? Let the Randomizer help you discover something new!",
     "start_url": "index.html",
     "background_color": "#ff6b00",
@@ -8,7 +8,7 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "assets/images/app-icon2.png",
+        "src": "assets/images/app-icon.png",
         "sizes": "50x50",
         "type": "image/png"
       }
