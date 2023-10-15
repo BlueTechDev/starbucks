@@ -8,7 +8,7 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "assets/images/app-icon.png",
+        "src": "assets/images/bg-image.png",
         "sizes": "50x50",
         "type": "image/png"
       }
