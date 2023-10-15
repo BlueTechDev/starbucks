@@ -76,3 +76,14 @@ button {
 button:hover {
     background-color: #c74120; /* Darker reddish orange on hover */
 }
+
+#back-btn {
+    padding-top: 10px;
+    gap: 5px;
+    margin: 6px;
+}
+
+#back-btn a{
+    text-decoration: none;
+    color: #fff;
+}
