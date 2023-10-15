@@ -18,7 +18,7 @@ body {
   align-items: center;
   height: 100vh;
   background-image: url(/assets/fallday.png);
-  background: no-repeat / cover / center; /* Combine background properties */
+  background-size: cover; /* Combine background properties */
 }
 
 #enter-btn {
@@ -28,6 +28,7 @@ body {
 }
 
 #enter-btn a {
+  font-size: 28px;
   text-decoration: none;
   color: var(--button-text-color);
   font-weight: bold;
