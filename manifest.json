@@ -15,39 +15,9 @@
     ],
     "screenshots": [
       {
-        "src": "/assets/seasonal/apple-croissant.jpeg",
+        "src": "/assets/seasonal/app-icon.png",
         "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/chai-tea.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/iced-apple-crisp.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/pumpkin-coldbrew.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/pumpkin-creamcheese.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/pumpkin-spice.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
-      },
-      {
-        "src": "/assets/seasonal/coffee.jpg",
-        "sizes": "1408x1200",
-        "type": "image/jpeg"
+        "type": "image/png"
       },
       {
         "src": "/assets/seasonal/starbucks.png",
