@@ -13,21 +13,12 @@
   padding: 0;
   overflow: hidden;
   background-color: var(--main-background-color);
+  background-image: url(/assets/images/fallday.png);
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-/* Video styles */
-video {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 1;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1; /* Place video behind other content */
 }
 
 /* Button styles */
@@ -39,7 +30,7 @@ video {
 
 #enter-btn a {
   text-decoration: none;
-  color: #FFA500;
+  color: #000;
   font-weight: bold;
 }
 
