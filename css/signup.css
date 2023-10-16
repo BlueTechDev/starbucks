@@ -1,0 +1,126 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the content on the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f7f2; /* Light beige background with a hint of yellow */
+    color: #553d35; /* Brown text color */
+}
+
+/* Header styles */
+header {
+    background-color: #e07b32; /* Warm orange header background */
+    padding: 10px 0;
+}
+
+/* Navigation styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e07b32; /* Orange background */
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.signup-section {
+    text-align: center;
+    background-color: #f3dfc7; /* Light orange background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #874d1d; /* Dark brown heading color */
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #e07b32; /* Orange label color */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d89f47; /* Dark orange border */
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #e07b32; /* Orange button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #e07b32; /* Orange footer background */
+    padding: 20px 0;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 5px 0;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .menu-open .navbar-menu {
+        display: flex;
+        flex-direction: column;
+    }
+}

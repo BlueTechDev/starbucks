@@ -1,0 +1,124 @@
+/* Reset some default browser styles */
+body, h1, p, label, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the content on the page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff6e0; /* Cream background */
+    color: #704214; /* Dark brown text color */
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    background-color: #e07b32; /* Warm orange header background */
+    padding: 10px 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e07b32; /* Orange background */
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Main content styles */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.login-section {
+    background-color: #fadfad; /* Light brown background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #704214; /* Dark brown heading color */
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    color: #704214; /* Dark brown label text color */
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fadfad; /* Match background color */
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #e07b32; /* Orange button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d0722d; /* Darker orange on hover */
+}
+
+p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+a {
+    color: #e07b32; /* Orange link color */
+    text-decoration: none;
+}
+
+/* Footer styles */
+footer {
+    background-color: #e07b32; /* Orange footer background */
+    padding: 10px 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 5px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
