@@ -736,3 +736,10 @@ document.getElementById('user-input-btn').addEventListener('click', () => {
 
 // Add click event listener to the reset button
 resetButton.addEventListener("click", resetDrink);
+
+const userTextInput = document.getElementById('user-input-text');
+
+userTextInput.addEventListener('input', function () {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+});
