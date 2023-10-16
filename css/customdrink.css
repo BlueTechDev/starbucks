@@ -1,5 +1,5 @@
 /* Reset some default browser styles */
-body, h1, p {
+body, h1, p, label {
     margin: 0;
     padding: 0;
 }
@@ -11,6 +11,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #ffeeea; /* Light beige background */
+    font-family: Arial, sans-serif; /* Choose a widely supported font */
 }
 
 /* Style the custom drink card */
@@ -22,6 +23,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 400px;
+    margin: 20px; /* Add some spacing between the card and the page edge */
 }
 
 /* Style the heading */
@@ -38,13 +40,18 @@ p {
     color: #8d8d8d; /* Gray */
 }
 
-/* Style the user input section */
+/* Style for the button container */
 .user-input {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack elements vertically */
     align-items: center;
 }
 
+#user-input-text {
+    width: 100%; /* Responsive width */
+}
+
+/* Style for the input label and textarea */
 label {
     font-size: 16px;
     color: #9c6446; /* Brown */
@@ -60,8 +67,9 @@ input {
     font-size: 16px;
 }
 
-
-button {
+/* Style for the Custom Drink and New Drink buttons */
+#user-input-btn,
+#new-drink-btn {
     padding: 10px 20px;
     background-color: #e25931; /* Reddish orange */
     color: #fff;
@@ -70,20 +78,42 @@ button {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    margin-bottom: 10px; /* Add space between buttons */
 }
 
-/* Add some hover effect to the button */
-button:hover {
+/* Add hover effect to the buttons */
+#user-input-btn:hover,
+#new-drink-btn:hover {
     background-color: #c74120; /* Darker reddish orange on hover */
 }
 
+/* Style for the Go Back button */
 #back-btn {
-    padding-top: 10px;
-    gap: 5px;
-    margin: 6px;
+    padding: 10px 20px;
+    background-color: #c74120; /* Dark reddish orange */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px; /* Add space between buttons */
+    color: #fff;
+    text-decoration: none; /* Apply styles to the link text */
 }
 
-#back-btn a{
-    text-decoration: none;
-    color: #fff;
+#back-btn a {
+    color: inherit; /* Inherit the parent's color */
+    text-decoration: none; /* Remove underline from links */
 }
+
+#chatGPT {
+    color: #9c6446;
+}
+
+#chatgpt-response {
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    color: #e25931; /* Or your desired color */
+    font-size: 18px; /* Adjust the font size as needed for readability */
+    margin-top: 10px; /* Add some space between the response and the input field */
+}
+

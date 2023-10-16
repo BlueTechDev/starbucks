@@ -19,12 +19,16 @@
         <div class="user-input">
             <label for="user-input-text">Your Preferences:</label>
             <input type="text" id="user-input-text" placeholder="E.g., Flavor, Size, Type, Additions">
-            <button id="user-input-btn">Get Custom Drink</button>
-            <button id="back-btn"><a href="/App-page/starbucks-app.html">Go Back</a></button>
-        </div> <br>
+            <button id="user-input-btn">Custom Drink</button>
+            <button id="new-drink-btn">New Drink</button>
+        </div>
+        <div id="back-btn">
+            <a href="/App-page/starbucks-app.html">Go Back</a>
+        </div>
+        <br>
         <!-- Add a response container -->
         <div class="response-container">
-            <p><strong>ChatGPT Response:</strong></p>
+            <p id="chatGPT"><strong>ChatGPT Response:</strong></p>
             <div id="chatgpt-response"></div>
         </div>
     </div>
