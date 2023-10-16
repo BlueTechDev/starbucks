@@ -7,8 +7,8 @@
   --button-hover-color: transparent;
 }
 
-/* Base styles */
-body {
+ /* Base styles */
+ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -17,24 +17,33 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url(/assets/images/fallday.png);
-  background-size: cover; /* Combine background properties */
 }
 
+/* Video styles */
+video {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 1;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; /* Place video behind other content */
+}
+
+/* Button styles */
 #enter-btn {
   font-family: Arial, sans-serif;
-  background-color: var(--button-background-color);
-  padding: var(--button-padding);
+  background-color: aliceblue;
+  padding: 10px;
 }
 
 #enter-btn a {
-  font-size: 28px;
   text-decoration: none;
-  color: var(--button-text-color);
+  color: #FFA500;
   font-weight: bold;
 }
 
 #enter-btn:hover {
   cursor: pointer;
-  background: var(--button-hover-color);
+  background: transparent;
 }
