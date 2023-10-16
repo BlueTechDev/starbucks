@@ -1,0 +1,240 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the content on the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f7f2; /* Light beige background with a hint of yellow */
+    color: #553d35; /* Brown text color */
+}
+
+/* Header styles */
+header {
+    background-color: #e07b32; /* Warm orange header background */
+    padding: 10px 0;
+}
+
+/* Hamburger Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e07b32; /* Orange background */
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    font-size: 18px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Hamburger Menu Styles */
+#menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background-color: #e07b32; /* Orange background */
+    border: 2px solid #874d1d; /* Dark orange border */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#menu li {
+    margin: 10px;
+}
+
+#menu a {
+    display: block;
+    padding: 10px;
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.welcome-section {
+    text-align: center;
+    background-color: #f3dfc7; /* Light orange background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #874d1d; /* Dark brown heading color */
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.get-started-button,
+.feature,
+.about-item {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #e07b32; /* Orange button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* Featured section styles */
+.featured-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.featured-item {
+    background-color: #f3dfc7; /* Light orange background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.featured-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #874d1d;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f9f7f2; /* Orange heading color */
+}
+
+/* About us section styles */
+.about-us-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.about-us-section p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.about-us-section a {
+    color: #fff;
+}
+
+/* Footer styles */
+footer {
+    background-color: #e07b32; /* Orange footer background */
+    padding: 20px 0;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-info {
+    font-size: 16px;
+}
+
+.social-links {
+    font-size: 24px;
+}
+
+.social-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.legal-links {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Add this to your CSS */
+.menu-open #menu {
+    display: flex;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 5px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        margin-top: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+/* Media Query for Responsive Navigation */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .menu-open .navbar-menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
