@@ -50,7 +50,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
 
 function showInstallPrompt() {
   // Show your custom button or prompt to the user
-  const installButton = document.getElementById('install-button');
+  const installButton = document.getElementById('addToHomeScreenButton');
   installButton.style.display = 'block';
 
   // Handle button click to trigger the "Add to Home Screen" prompt
