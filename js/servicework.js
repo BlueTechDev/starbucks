@@ -18,8 +18,15 @@ self.addEventListener('install', (event) => {
         return cache.addAll([
           '/',
           '/index.html',
-          '/styles.css',
-          'sscript.js',
+          '/App-page/starbucks-app.html',
+          '/css/styles.css',
+          '/css/customdrink.css',
+          '/LoadingPage/style.css',
+          '/js/script.js',
+          '/LoadingPage/script.js',
+          '/js/customedrink.js',
+          '/js/servicework.js',
+          '/js/analytics.js',
           // Add more URLs to cache here
         ]);
       })
