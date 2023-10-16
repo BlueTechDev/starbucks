@@ -1,15 +1,15 @@
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker
-        .register('/servicework.js') // Path to your service worker file
-        .then((registration) => {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
-        });
-    });
-  }
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/sw.js') // Adjust the path to your service worker file
+      .then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch((error) => {
+        console.error('Service Worker registration failed:', error);
+      });
+  });
+}
 
   // Install event: Cache static assets
 self.addEventListener('install', (event) => {
