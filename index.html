@@ -11,11 +11,14 @@
 </head>
 <body>
 
-  <!-- Video element for background -->
   <video autoplay muted loop>
     <source src="/assets/videos/fallingleaves.mp4" type="video/mp4">
-    <!-- Add other video formats for browser compatibility -->
+    <source src="/assets/videos/fallingleaves.webm" type="video/webm">
+    <source src="/assets/videos/fallingleaves.ogv" type="video/ogg">
+    <!-- Fallback message for browsers that don't support HTML5 video -->
+    Your browser does not support the video tag.
   </video>
+  
   <main>
     <div class="container">
       <button id="enter-btn"><a href="/App-page/starbucks-app.html">Get Random Order</a></button>
