@@ -1,9 +1,23 @@
-// JavaScript for menu toggle
+// Get references to the elements
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
-const body = document.getElementById('body');
+const navLinks = menu.querySelectorAll('a');
 
+// Function to hide the menu
+function hideMenu() {
+    menu.style.display = 'none';
+}
+
+// Add a click event listener to each link
+navLinks.forEach(link => {
+    link.addEventListener('click', hideMenu);
+});
+
+// Add a click event listener to the menu toggle button
 menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('menu-open');
-    body.classList.toggle('menu-open');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
 });
