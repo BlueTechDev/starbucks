@@ -21,3 +21,12 @@ menuToggle.addEventListener('click', () => {
         menu.style.display = 'none';
     }
 });
+
+const scrollToTopBtn = document.getElementById("back-to-top");
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
