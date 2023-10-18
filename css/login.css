@@ -54,6 +54,11 @@ h1 {
     color: #704214; /* Dark brown heading color */
 }
 
+h1 a {
+    color: #d0722d;
+    text-decoration: none;
+}
+
 form {
     text-align: left;
 }
