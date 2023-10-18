@@ -107,7 +107,8 @@ p {
 .get-started-button,
 .feature,
 .about-item,
-.login-item {
+.login-item,
+#order {
     display: inline-block;
     padding: 15px 30px;
     background-color: #e07b32; /* Orange button */
@@ -135,6 +136,27 @@ p {
     height: auto;
     margin-bottom: 20px;
 }
+
+.seasonal-menu {
+    background-color: #f3dfc7; /* Light orange background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.seasonal-item {
+    background-color: #f3dfc7; /* Light orange background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.seasonal-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 
 h2 {
     font-size: 30px;
