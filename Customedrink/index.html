@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Customize your Starbucks drink with the Starbucks Randomizer. Enter your preferences and discover a unique coffee experience.">
-    <meta name="keywords" content="starbucks, randomizer, customize, drink, coffee, starbucks food">
-    <meta name="author" content="Jonah Kroll">
-    <title>Starbucks Randomizer - Customize Your Drink</title>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="/css/customdrink.css">
-    <link rel="shortcut icon" href="/assets/starbucks.png" type="image/x-icon">
-    <!-- Include the necessary icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="custom-drink-card">
-        <h1>Customize Your Starbucks Drink</h1>
-        <p>Enter your preferences below to create a customized Starbucks beverage.</p>
-        <div class="user-input">
-            <textarea id="user-input-text" rows="4" placeholder="E.g., Flavor, Size, Type, Additions, Mood, etc.."></textarea> <br>
-            <button id="user-input-btn">Custom Drink</button>
-            <button id="new-drink-btn">New Drink</button>
-        </div>
-        <div id="back-btn">
-            <a href="/App-page/starbucks-app.html">Go Back</a>
-        </div>
-        <br>
-        <!-- Add a response container -->
-        <div class="response-container">
-            <p id="chatGPT"><strong>ChatGPT Response:</strong></p>
-            <div id="chatgpt-response"></div>
-        </div>
-    </div>
-    <script src="/js/customdrink.js"></script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/random-drink">Random Drink</a></li>
+                <li><a href="/customize-order">Customize Order</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome, John Doe</h1>
+
+        <section class="customize-order">
+            <h2>Customize Your Order</h2>
+            <form>
+                <div class="form-group">
+                    <label for="drink-name">Drink Name:</label>
+                    <input type="text" id="drink-name" name="drink-name">
+                </div>
+                <div class="form-group">
+                    <label for="drink-description">Drink Description:</label>
+                    <textarea id="drink-description" name="drink-description"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2022 Coffee Delight. All rights reserved.</p>
+    </footer>
 </body>
 </html>
