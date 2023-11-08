@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sign up for SipSurpirse">
+    <meta name="description" content="Sign up for SipSurprise">
     <meta name="author" content="Your Name">
-    <title>Sign Up - SipSurpirse</title>
-    <link rel="stylesheet" href="/css/signup.css"> <!-- Include your CSS file -->
+    <title>Create an account - SipSurpirse</title> <!-- Updated the page title -->
+
+    <!-- Moved the CSS link to the head section -->
+    <link rel="stylesheet" href="/css/signup.css">
     <link rel="shortcut icon" href="/assets/starbucks.png" type="image/x-icon">
 </head>
 <body>
@@ -23,16 +25,16 @@
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
 
-                <label for="email">Email</label>
+                <label for="email">Email</label> <!-- Added label for the email field -->
                 <input type="email" id="email" name="email">
 
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
 
-                <label for="confirm-password">Confirm Password</label>
+                <label for="confirm-password">Confirm Password</label> <!-- Added label for the confirm password field -->
                 <input type="password" id="confirm-password" name="confirm-password" required>
 
-                <button type="submit">Sign Up</button>
+                <button type="submit"><a href="/Homepage/index.html">Sign Up</a></button>
             </form>
             <p>Already have an account? <a href="/LoginPage/index.html">Log in</a></p>
         </section>
@@ -41,5 +43,6 @@
     <footer>
         <p>&copy; 2023 SipSurpirse. All rights reserved.</p>
     </footer>
+    <script src="/js/signup.js"></script>
 </body>
 </html>

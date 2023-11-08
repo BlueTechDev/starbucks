@@ -90,6 +90,11 @@ button {
     cursor: pointer;
 }
 
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
 button:hover {
     background-color: #d0722d; /* Darker orange on hover */
 }
