@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to Starbucks App Portal">
-  <title>SipSurprise</title>
-  <link rel="stylesheet" href="/LoadingPage/style.css">
-  <link rel="shortcut icon" href="/assets/images/app-icon.png" type="image/x-icon">
-  <link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up for SipSurpirse">
+    <meta name="author" content="Your Name">
+    <title>Sign Up - SipSurpirse</title>
+    <link rel="stylesheet" href="/css/signup.css"> <!-- Include your CSS file -->
+    <link rel="shortcut icon" href="/assets/starbucks.png" type="image/x-icon">
 </head>
 <body>
-  
-  <main>
-    <div class="container">
-      <button id="enter-btn"><a href="/Homepage/index.html">Welcome to SipSurpirse</a></button>
-    </div>
-  </main>
-  <script src="/LoadingPage/script.js"></script>
-  <script src="/js/servicework.js"></script>
-    <script src="/js/test.js"></script>
-    <script src="/js/analytics.js"></script>
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
+    <header>
+        <nav class="navbar">
+            <a href="/index.html" class="logo">SipSurpirse</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="signup-section">
+            <h1><a href="/Homepage/index.html">Sign Up</a></h1>
+            <form id="signup-form" action="/signup" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="/LoginPage/index.html">Log in</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 SipSurpirse. All rights reserved.</p>
+    </footer>
 </body>
 </html>
