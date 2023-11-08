@@ -3,46 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sign up for SipSurprise">
-    <meta name="author" content="Your Name">
-    <title>Create an account - SipSurpirse</title> <!-- Updated the page title -->
-
-    <!-- Moved the CSS link to the head section -->
-    <link rel="stylesheet" href="/css/signup.css">
-    <link rel="shortcut icon" href="/assets/starbucks.png" type="image/x-icon">
+    <title>Coffee Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/respect-css/dist/respect.min.css">
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .button {
+            padding: 10px 20px;
+            font-size: 24px;
+            background-color: #a17c5b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #7d5a42;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .button {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="/index.html" class="logo">SipSurpirse</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="signup-section">
-            <h1><a href="/Homepage/index.html">Sign Up</a></h1>
-            <form id="signup-form" action="/signup" method="POST">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="email">Email</label> <!-- Added label for the email field -->
-                <input type="email" id="email" name="email">
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="confirm-password">Confirm Password</label> <!-- Added label for the confirm password field -->
-                <input type="password" id="confirm-password" name="confirm-password" required>
-
-                <button type="submit"><a href="/Homepage/index.html">Sign Up</a></button>
-            </form>
-            <p>Already have an account? <a href="/LoginPage/index.html">Log in</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 SipSurpirse. All rights reserved.</p>
-    </footer>
-    <script src="/js/signup.js"></script>
+    <div class="container">
+        <h1>Welcome to SipSurpirse</h1>
+        <div class="button-container">
+            <a href="/LoginPage/" class="button">Log In</a>
+            <a href="/signup/signup.html" class="button">Sign Up</a>
+        </div>
+    </div>
 </body>
 </html>

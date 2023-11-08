@@ -90,9 +90,13 @@ button {
     cursor: pointer;
 }
 
-a {
+button a {
     color: #fff;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+#errorMessage {
+    color: red;
 }
 
 button:hover {
