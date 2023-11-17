@@ -7,13 +7,13 @@ body, h1, h2, h3, p, ul, li, a {
 /* Center the content on the page */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f7f2; /* Light beige background with a hint of yellow */
-    color: #553d35; /* Brown text color */
+    background-color: #d3e9f9; /* Light blue background */
+    color: #334e68; /* Dark blue text color */
 }
 
 /* Header styles */
 header {
-    background-color: #e07b32; /* Warm orange header background */
+    background-color: #86b7db; /* Light blue header background */
     padding: 10px 0;
 }
 
@@ -22,38 +22,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e07b32; /* Orange background */
+    background-color: #86b7db; /* Light blue background */
     padding: 10px 20px;
-}
-
-.logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.navbar-toggler {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-}
-
-.navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar-menu li {
-    font-size: 18px;
-}
-
-.navbar-menu a {
-    text-decoration: none;
-    color: #fff;
 }
 
 /* Hamburger Menu Styles */
@@ -63,19 +33,10 @@ header {
     top: 60px;
     right: 20px;
     flex-direction: column;
-    background-color: #e07b32; /* Orange background */
-    border: 2px solid #874d1d; /* Dark orange border */
+    background-color: #86b7db; /* Light blue background */
+    border: 2px solid #4d869f; /* Dark blue border */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-#menu li {
-    margin: 10px;
-}
-
-#menu a {
-    display: block;
-    padding: 10px;
 }
 
 /* Main content styles */
@@ -87,7 +48,7 @@ main {
 
 .welcome-section {
     text-align: center;
-    background-color: #f3dfc7; /* Light orange background */
+    background-color: #d3e9f9; /* Light blue background */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -96,36 +57,12 @@ main {
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #874d1d; /* Dark brown heading color */
+    color: #275a7d; /* Dark blue heading color */
 }
 
 p {
     font-size: 20px;
     margin-bottom: 20px;
-}
-
-.get-started-button,
-.feature,
-.about-item,
-.login-item,
-#order {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #e07b32; /* Orange button */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-#back-to-top {
-    display: inline-block;
-    padding: 5px 3px;
-    background-color: #874d1d; /* Orange button */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 15px;
 }
 
 /* Featured section styles */
@@ -135,16 +72,10 @@ p {
 }
 
 .featured-item {
-    background-color: #f3dfc7; /* Light orange background */
+    background-color: #d3e9f9; /* Light blue background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.featured-item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
 }
 
 .seasonal-menu {
@@ -153,29 +84,22 @@ p {
 }
 
 .seasonal-item {
-    background-color: #f3dfc7; /* Light orange background */
+    background-color: #d3e9f9; /* Light blue background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.seasonal-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-
 h2 {
     font-size: 30px;
     margin-bottom: 20px;
-    color: #874d1d;
+    color: #275a7d; /* Dark blue heading color */
 }
 
 h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #f9f7f2; /* Orange heading color */
+    color: #f9f7f2; /* White heading color */
 }
 
 /* About us section styles */
@@ -185,18 +109,28 @@ h3 {
     text-align: center;
 }
 
-.about-us-section p {
-    font-size: 20px;
-    margin-bottom: 20px;
+.about-us-section button {
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: #4d869f; /* Greenish green background */
+    color: white; /* White text color */
 }
 
 .about-us-section a {
-    color: #fff;
+    color: #fff; /* Blue link color */
+    text-decoration: underline;
 }
 
 /* Footer styles */
 footer {
-    background-color: #e07b32; /* Orange footer background */
+    background-color: #86b7db; /* Light blue footer background */
     padding: 20px 0;
     color: #fff;
 }
@@ -234,39 +168,14 @@ footer {
     display: flex;
 }
 
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    header {
-        padding: 5px 0;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    ul {
-        margin-top: 10px;
-    }
-
-    main {
-        padding: 10px;
-    }
-}
-
-/* Media Query for Responsive Navigation */
-@media (max-width: 768px) {
-    .navbar-menu {
-        display: none;
-    }
-
-    .navbar-toggler {
-        display: block;
-    }
-
-    .menu-open .navbar-menu {
-        display: flex;
-        flex-direction: column;
-    }
+#back-to-top {
+    bottom: 30px;
+    right: 50px;
+    z-index: 99;
+    width: 80px;
+    height: 80px;
+    border-radius: 9%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }

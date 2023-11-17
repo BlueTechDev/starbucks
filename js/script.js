@@ -1,5 +1,4 @@
 let selectedSize = "";
-let milkChoice = "";
 
 document.getElementById("reset-btn").style.display = "none";
 
@@ -33,40 +32,16 @@ document.getElementById("drink-btn").addEventListener("click", function () {
 
   const randomDrink = `Your drink is a ${selectedSize} ${drink}.`;
   document.getElementById("randomize-btn").style.display = "none";
-  document.getElementById("customize-btn").style.display = "none";
-  document.getElementById("logout-btn").style.display = "none"; //hide logout button
-  document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("Custom-btn").style.display = "none"; // Hide the custom button
-  showLoadingIcon();
+  document.getElementById("drink-btn").style.display = "none";
+  showLoadingIcon(); // Make sure this function shows the loading icon
 
   setTimeout(() => {
-    hideLoadingIcon();
+    hideLoadingIcon(); // Ensure this function hides the loading icon
     document.getElementById("random-drink").textContent = randomDrink;
-    document.getElementById("logout-btn").style.display = "none"; //hide logout button
     document.getElementById("drink-btn").style.display = "inline-block";
-    document.getElementById("reset-btn").style.display = "inline-block"; // Show the reset button
-  }, 2000);
+    document.getElementById("reset-btn").style.display = "inline-block";
+  }, 2000); // Adjust the timeout duration as needed
 });
-
-
-function resetOrder() {
-  document.body.style.backgroundImage = 'url(/assets/images/coffee-cup.png)';
-  clearOrderElements();
-  hideAllButtons();
-  document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
-  document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
-  document.getElementById("frappe-btn").style.display = "none"; // Hide the frappe button
-  document.getElementById("tea-btn").style.display = "none"; // Hide the tea button
-  document.getElementById("seasonal-btn").style.display = "none"; // Hide the seasonal button
-  document.getElementById("customize-btn").style.display = "inline-block"; // Hide the custome button
-  document.getElementById("randomize-btn").style.display = "inline-block"; // Hide the random button
-  document.getElementById("logout-btn").style.display = "inline-block"; //hide logout button
-  document.getElementById("drink-btn").style.display = "inline-block"; // Hide the drink button
-  document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("reset-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("Custom-btn").style.display = "none"; // Hide the custom button
-}
-
 
 
 document.getElementById("randomize-btn").addEventListener("click", function () {
@@ -77,222 +52,29 @@ document.getElementById("randomize-btn").addEventListener("click", function () {
   const randomOrder = `Today's order is a ${selectedSize} ${drink} with a ${food} on the side.`;
 
   document.getElementById("randomize-btn").style.display = "none";
-  document.getElementById("customize-btn").style.display = "none";
-  document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("logout-btn").style.display = "none"; // Hide the logout button
-  document.getElementById("Custom-btn").style.display = "none"; // Hide the custom button
+  document.getElementById("drink-btn").style.display = "none";
   showLoadingIcon();
 
   setTimeout(() => {
     hideLoadingIcon();
     document.getElementById("random-drink").textContent = randomOrder;
     document.getElementById("randomize-btn").style.display = "inline-block";
-    document.getElementById("drink-btn").style.display = "none"; // Show the drink button
-    document.getElementById("customize-btn").style.display = "none";
-    document.getElementById("reset-btn").style.display = "inline-block"; // Show the reset button
-    document.getElementById("logout-btn").style.display = "none"; // Hide the logout button
-
-    showResetButton();
+    document.getElementById("drink-btn").style.display = "inline-block";
+    document.getElementById("reset-btn").style.display = "inline-block";
   }, 2000);
 });
 
 
-
-document.getElementById("customize-btn").addEventListener("click", function () {
-  resetOrder();
-  showCustomizeButtons();
-});
-
-function showCustomizeButtons() {
-
-  document.getElementById("randomize-btn").style.display = "none";
-  document.getElementById("drink-btn").style.display = "none";
-  document.getElementById("logout-btn").style.display = "none"; //hide logout button
-  document.getElementById("hot-btn").style.display = "inline-block";
-  document.getElementById("cold-btn").style.display = "inline-block";
-  document.getElementById("frappe-btn").style.display = "inline-block";
-  document.getElementById("tea-btn").style.display = "inline-block";
-  document.getElementById("refresh-btn").style.display = "inline-block";
-  document.getElementById("seasonal-btn").style.display = "inline-block";
-  document.getElementById("customize-btn").style.display = "none";
-  document.getElementById("Custom-btn").style.display = "inline-block"; // Hide the custom button
-  showResetButton();
+function resetOrder() {
+  document.body.style.backgroundImage = 'url(/assets/images/coffee-cup.png)';
+  clearOrderElements();
+  hideAllButtons();
+  document.getElementById("logout-btn").style.display = "inline-block"; //hide logout button
+  document.getElementById("drink-btn").style.display = "inline-block"; // Hide the drink button
+  document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
+  document.getElementById("reset-btn").style.display = "none"; // Hide the drink button
+  document.getElementById("Custom-btn").style.display = "none"; // Hide the custom button
 }
-
-document.getElementById("hot-btn").addEventListener("click", function () {
-  resetOrder();
-  const hotDrink = getRandomHotDrink();
-  const milkOption = getRandomMilk();
-  const yourHotDrink = `Your order is a ${selectedSize} ${hotDrink} with ${milkOption}`;
-
-  document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
-  document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
-  document.getElementById("frappe-btn").style.display = "none"; // Hide the frappe button
-  document.getElementById("tea-btn").style.display = "none"; // Hide the tea button
-  document.getElementById("seasonal-btn").style.display = "none"; // Hide the seasonal button
-  document.getElementById("customize-btn").style.display = "none"; // Hide the custome button
-  document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
-  document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("logout-btn").style.display = "none"; //hide logout button
-  document.getElementById("Custom-btn").style.display = "none"; // Hide the custom button
-  showLoadingIcon();
-
-  setTimeout(() => {
-    hideLoadingIcon();
-    document.getElementById("random-order").textContent = yourHotDrink;
-    document.getElementById("hot-btn").style.display = "inline-block"; // Show the hot button
-    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the custome button
-    showResetButton();
-  }, 2000);
-});
-
-
-document.getElementById("cold-btn").addEventListener("click", function () {
-  resetOrder();
-  const coldDrink = getRandomColdDrink();
-  const milkOption = getRandomMilk();
-
-  const yourColdDrink = `Your order is a ${selectedSize} ${coldDrink} with ${milkOption}`;
-
-  document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
-  document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
-  document.getElementById("frappe-btn").style.display = "none"; // Hide the frappe button
-  document.getElementById("tea-btn").style.display = "none"; // Hide the tea button
-  document.getElementById("seasonal-btn").style.display = "none"; // Hide the seasonal button
-  document.getElementById("customize-btn").style.display = "none"; // Hide the custome button
-  document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
-  document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("logout-btn").style.display = "none"; //hide logout button
-  document.getElementById("Custom-btn").style.display = "none"; // Hide the custom button
-  showLoadingIcon();
-
-  setTimeout(() => {
-    hideLoadingIcon();
-    document.getElementById("random-order").textContent = yourColdDrink;
-    document.getElementById("cold-btn").style.display = "inline-block"; // Show the cold button
-    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the custome button
-    showResetButton();
-  }, 2000);
-});
-
-
-document.getElementById("frappe-btn").addEventListener("click", function () {
-  resetOrder();
-  const frappeDrink = getRandomFrappucino();
-  const milkOption = getRandomMilk();
-
-  const yourFrappeDrink = `Your order is a ${selectedSize} ${frappeDrink} with ${milkOption}`;
-
-  document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
-  document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
-  document.getElementById("tea-btn").style.display = "none"; // Hide the tea button
-  document.getElementById("seasonal-btn").style.display = "none"; // Hide the seasonal button
-  document.getElementById("customize-btn").style.display = "none"; // Hide the custome button
-  document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
-  document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("logout-btn").style.display = "none"; //hide logout button
-  document.getElementById("Custom-btn").style.display = "none"; // Hide the custom button
-  showLoadingIcon();
-
-  setTimeout(() => {
-    hideLoadingIcon();
-    document.getElementById("random-order").textContent = yourFrappeDrink;
-    document.getElementById("frappe-btn").style.display = "inline-block";
-    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the custome button
-    showResetButton();
-  }, 2000);
-});
-
-document.getElementById("refresh-btn").addEventListener("click", function () {
-  resetOrder();
-  const refresherDrink = getRandomRefresher();
-  const yourRefresherDrink = `Your order is a ${selectedSize} ${refresherDrink}.`;
-
-  document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
-  document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
-  document.getElementById("frappe-btn").style.display = "none"; // Hide the frappe button
-  document.getElementById("tea-btn").style.display = "none"; // Hide the tea button
-  document.getElementById("seasonal-btn").style.display = "none"; // Hide the seasonal button
-  document.getElementById("customize-btn").style.display = "none"; // Hide the custome button
-  document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
-  document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("logout-btn").style.display = "none"; //hide logout button
-  document.getElementById("Custom-btn").style.display = "none"; // Hide the custom button
-  showLoadingIcon();
-
-  setTimeout(() => {
-    hideLoadingIcon();
-    document.getElementById("random-order").textContent = yourRefresherDrink;
-
-    document.getElementById("refresh-btn").style.display = "inline-block";
-    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the custome button
-    document.getElementById("reset-btn").style.display = "inline-block";
-    showResetButton();
-  }, 2000);
-});
-
-document.getElementById("tea-btn").addEventListener("click", function () {
-  resetOrder();
-  const teaDrink = getRandomTea();
-  const yourTeaDrink = `Your order is a ${selectedSize} ${teaDrink}.`;
-
-  document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
-  document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
-  document.getElementById("frappe-btn").style.display = "none"; // Hide the frappe button
-  document.getElementById("tea-btn").style.display = "none"; // Hide the tea button
-  document.getElementById("seasonal-btn").style.display = "none"; // Hide the seasonal button
-  document.getElementById("customize-btn").style.display = "none"; // Hide the custome button
-  document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
-  document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("logout-btn").style.display = "none"; //hide logout button
-  document.getElementById("Custom-btn").style.display = "none"; // Hide the custom button
-  showLoadingIcon();
-
-  setTimeout(() => {
-    hideLoadingIcon();
-    document.getElementById("random-order").textContent = yourTeaDrink;
-
-    document.getElementById("tea-btn").style.display = "inline-block";
-    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the custome button
-    document.getElementById("reset-btn").style.display = "inline-block";
-    showResetButton();
-  }, 2000);
-});
-
-document.getElementById("seasonal-btn").addEventListener("click", function () {
-  resetOrder();
-  const seasonalItem = getSeasonalItem();
-  const yourSeasonalItem = `Your order is a ${selectedSize} ${seasonalItem}.`;
-
-  document.getElementById("cold-btn").style.display = "none"; // Hide the cold button
-  document.getElementById("hot-btn").style.display = "none"; // Hide the hot button
-  document.getElementById("frappe-btn").style.display = "none"; // Hide the frappe button
-  document.getElementById("tea-btn").style.display = "none"; // Hide the tea button
-  document.getElementById("seasonal-btn").style.display = "none"; // Hide the seasonal button
-  document.getElementById("customize-btn").style.display = "none"; // Hide the custome button
-  document.getElementById("randomize-btn").style.display = "none"; // Hide the random button
-  document.getElementById("drink-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("refresh-btn").style.display = "none"; // Hide the drink button
-  document.getElementById("logout-btn").style.display = "none"; //hide logout button
-  document.getElementById("Custom-btn").style.display = "none"; // Hide the custom button
-  showLoadingIcon();
-
-  setTimeout(() => {
-    hideLoadingIcon();
-    document.getElementById("random-order").textContent = yourSeasonalItem;
-
-    document.getElementById("seasonal-btn").style.display = "inline-block";
-    document.getElementById("customize-btn").style.display = "inline-block"; // Hide the custome button
-    document.getElementById("reset-btn").style.display = "inline-block";
-    showResetButton();
-    setSeasonalBackgroundImage(seasonalItem);
-  }, 2000);
-});
 
 document.getElementById("reset-btn").addEventListener("click", function () {
   resetOrder();
@@ -360,19 +142,6 @@ function getRandomHotDrink() {
   return `${randomDrink}`;
 }
 
-function getRandomMilk() {
-  const milk = 
-  ["Whole milk",
-  "non-fat milk",
-  "2% milk",
-  "Soy milk",
-  "Almond milk",
-  "Coconut milk"
-]
-
-const randomMilk = milk[Math.floor(Math.random() * milk.length)];
-return `${randomMilk}`;
-}
 function getRandomColdDrink() {
   const icedDrinkOptions = [
     "Iced Coffee",

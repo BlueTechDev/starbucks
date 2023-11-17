@@ -13,7 +13,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #e07b32; /* Warm orange header background */
+    background-color: #92cceb; /* Light blue header background */
     padding: 10px 0;
 }
 
@@ -22,7 +22,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e07b32; /* Orange background */
+    background-color: #92cceb; /* Light blue background */
     padding: 10px 20px;
 }
 
@@ -42,7 +42,7 @@ main {
 
 .signup-section {
     text-align: center;
-    background-color: #f3dfc7; /* Light orange background */
+    background-color: #f5eff3; /* Light lavender background */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -51,11 +51,11 @@ main {
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #874d1d; /* Dark brown heading color */
+    color: #4c4d4d; /* Dark gray heading color */
 }
 
 h1 a {
-    color: #e07b32;
+    color: #5e82a3;
     text-decoration: none;
 }
 
@@ -67,13 +67,13 @@ label {
     display: block;
     font-size: 20px;
     margin-bottom: 10px;
-    color: #e07b32; /* Orange label color */
+    color: #4c4d4d; /* Dark gray label color */
 }
 
 input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #d89f47; /* Dark orange border */
+    border: 1px solid #f5eff3; /* Match background color */
     border-radius: 4px;
     margin-bottom: 16px;
     font-size: 16px;
@@ -82,7 +82,7 @@ input {
 button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #e07b32; /* Orange button */
+    background-color: #92cceb; /* Light blue button */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -90,7 +90,7 @@ button {
 }
 
 a {
-    color: #fff; /* Orange link color */
+    color: #ffffff; /* Light blue link color */
     text-decoration: underline;
 }
 
@@ -101,7 +101,7 @@ p {
 
 /* Footer styles */
 footer {
-    background-color: #e07b32; /* Orange footer background */
+    background-color: #92cceb; /* Light blue footer background */
     padding: 20px 0;
     color: #fff;
 }

@@ -7,14 +7,14 @@ body, h1, p, label, input, button {
 /* Center the content on the page */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fff6e0; /* Cream background */
-    color: #704214; /* Dark brown text color */
+    background-color: #f1f5f8; /* Light blue-gray background */
+    color: #4c4d4d; /* Dark gray text color */
     text-align: center;
 }
 
 /* Header styles */
 header {
-    background-color: #e07b32; /* Warm orange header background */
+    background-color: #92cceb; /* Light blue header background */
     padding: 10px 0;
 }
 
@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e07b32; /* Orange background */
+    background-color: #92cceb; /* Light blue background */
     padding: 10px 20px;
 }
 
@@ -42,7 +42,7 @@ main {
 }
 
 .login-section {
-    background-color: #fadfad; /* Light brown background */
+    background-color: #f5eff3; /* Light lavender background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -51,11 +51,11 @@ main {
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #704214; /* Dark brown heading color */
+    color: #4c4d4d; /* Dark gray heading color */
 }
 
 h1 a {
-    color: #d0722d;
+    color: #5e82a3;
     text-decoration: none;
 }
 
@@ -66,14 +66,14 @@ form {
 label {
     display: block;
     font-size: 18px;
-    color: #704214; /* Dark brown label text color */
+    color: #4c4d4d; /* Dark gray label text color */
     margin-bottom: 5px;
 }
 
 input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #fadfad; /* Match background color */
+    border: 1px solid #f5eff3; /* Match background color */
     border-radius: 5px;
     font-size: 16px;
     margin-bottom: 15px;
@@ -82,7 +82,7 @@ input {
 button {
     width: 100%;
     padding: 15px;
-    background-color: #e07b32; /* Orange button */
+    background-color: #92cceb; /* Light blue button */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -100,7 +100,7 @@ button a {
 }
 
 button:hover {
-    background-color: #d0722d; /* Darker orange on hover */
+    background-color: #729cbf; /* Darker blue on hover */
 }
 
 p {
@@ -109,13 +109,13 @@ p {
 }
 
 a {
-    color: #e07b32; /* Orange link color */
+    color: #92cceb; /* Light blue link color */
     text-decoration: none;
 }
 
 /* Footer styles */
 footer {
-    background-color: #e07b32; /* Orange footer background */
+    background-color: #92cceb; /* Light blue footer background */
     padding: 10px 0;
     color: #fff;
     font-size: 16px;

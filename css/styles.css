@@ -18,74 +18,40 @@ body {
 }
 
 header {
-  background-color: #ff6b00; /* Orange */
+  background-color: #00a1ff; /* Icy blue */
   color: #fff; /* White */
   padding: 20px 0; /* Adjusted padding */
   text-align: center;
 }
 
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px; /* Add margin to separate the logo and title */
-}
-
-.logo {
-  width: 50px;
-  margin-right: 10px;
-}
-
-h1 {
-  font-size: 24px;
-  margin: 0; /* Reset margin */
-}
-
-p {
-  font-size: 16px; /* Adjust font size */
-  line-height: 1.5; /* Improve readability with line-height */
-}
-
-main {
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Example focus style for buttons */
-button:focus {
-  outline: 2px solid #ff6b00; /* Orange outline */
-}
-
-
 .randomizer-container {
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
   margin-bottom: 20px;
   max-width: 400px;
   margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add a subtle shadow */
 }
 
 h2 {
   font-size: 18px;
   margin-bottom: 10px;
+  color: #00a1ff; /* Icy blue */
 }
 
 #random-order,
 #random-drink {
   font-size: 26px;
   margin-bottom: 20px;
+  color: #00a1ff; /* Icy blue */
 }
 
 #randomize-btn,
 #drink-btn,
-#customize-btn,
-#addToHomeScreenButton {
-  background-color: #ff6b00; /* Orange */
+#customize-btn{
+  background-color: #00a1ff; /* Icy blue */
   color: #fff; /* White */
   padding: 10px 20px;
   border: none;
@@ -96,88 +62,19 @@ h2 {
   margin-left: 10px; /* Add this line to add some spacing between buttons */
 }
 
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 10px; /* Add some spacing between button containers */
-}
-
-.button-container button {
-  background-color: #ff6b00; /* Orange */
-  color: #fff; /* White */
-  padding: 10px 15px; /* Reduce padding for smaller width */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px; /* Slightly reduce font size for mobile */
-  margin-right: 10px; /* Add some right margin to separate buttons */
-  margin-bottom: 10px; /* Add some bottom margin to create vertical spacing */
-}
-
-#Custom-btn,
-#logout-btn {
-  background-color: #ff6b00; /* Orange */
-  color: #fff; /* White */
-  padding: 10px 15px; /* Reduce padding for smaller width */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px; /* Slightly reduce font size for mobile */
-  margin-right: 10px; /* Add some right margin to separate buttons */
-  margin-bottom: 10px; /* Add some bottom margin to create vertical spacing */
-}
-
-
-#customize-btn,
-#reset-btn {
-  background-color: #ff6b00; /* Orange */
-  color: #fff; /* White */
-  padding: 10px 15px; /* Reduce padding for smaller width */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px; /* Slightly reduce font size for mobile */
-  margin-right: 10px; /* Add some right margin to separate buttons */
-  margin-bottom: 10px; /* Add some bottom margin to create vertical spacing */
-}
-
-#Custom-btn a {
-  text-decoration: none;
-  color: #ffff;
-}
-
-#hot-btn,
-#cold-btn,
-#refresh-btn,
-#tea-btn,
-#frappe-btn,
-#seasonal-btn,
-#Custom-btn {
-  display: none;
-}
-
 #loading-icon {
-  display: none; /* Hide the star icon by default */
+  display: none; /* Hide the loading icon by default */
 }
 
 .loading-icon {
-  color: #ff6b00; /* Orange */
+  color: #00a1ff; /* Icy blue */
   font-size: 54px; /* Adjust the size of the loading icon */
   animation: spin 2s linear infinite; /* Apply the spinning animation */
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 #reset-btn {
   display: none;
-  background-color: #ff6b00; /* Orange */
+  background-color: #00a1ff; /* Icy blue */
   color: #fff; /* White */
   padding: 10px 20px;
   border: none;
@@ -188,59 +85,17 @@ h2 {
   margin-left: 10px; /* Add this line to add some spacing between buttons */
 }
 
-#btm-container {
-  display: flex; /* Use flexbox to arrange buttons side by side */
-  align-items: center; /* Center vertically within the container */
-}
-
-#logout-btn,
-#addToHomeScreenButton {
-  background-color: #ff6b00;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-right: 10px; /* Add right margin to separate buttons */
-}
-
-
-
 footer {
-  background-color: #ff6b00; /* Orange */
+  background-color: #00a1ff; /* Icy blue */
   color: #fff; /* White */
   padding: 20px;
   text-align: center;
   font-size: 14px;
 }
 
-footer #disclaimer {
-  font-style: italic;
-  font-size: 8px;
-}
-
-/* Add this media query for landscape orientation */
 @media screen and (orientation: landscape) {
-  body {
-    background-size: contain;
-    background-position: center;
-  }
-
   header {
     padding: 10px 0; /* Adjusted padding */
-  }
-
-  .header-content {
-    margin-bottom: 5px; /* Reduce margin */
-  }
-
-  h1 {
-    font-size: 20px; /* Slightly reduce font size */
-  }
-
-  p {
-    font-size: 14px; /* Slightly reduce font size */
   }
 
   .randomizer-container {
@@ -253,22 +108,6 @@ footer #disclaimer {
     margin-bottom: 10px;
   }
 
-  #randomize-btn,
-  #drink-btn,
-  #customize-btn,
-  #hot-btn,
-  #cold-btn,
-  #refresh-btn,
-  #tea-btn,
-  #frappe-btn,
-  #reset-btn {
-    font-size: 14px; /* Slightly reduce font size */
-    margin-left: 5px; /* Reduce left margin */
-    margin-right: 5px; /* Reduce right margin */
-    margin-bottom: 5px; /* Reduce bottom margin */
-  }
-
-
   .loading-icon {
     font-size: 40px; /* Adjust the size of the loading icon */
   }
@@ -276,9 +115,5 @@ footer #disclaimer {
   footer {
     padding: 10px;
     font-size: 12px; /* Slightly reduce font size */
-  }
-
-  footer #disclaimer {
-    font-size: 6px; /* Reduce font size */
   }
 }
