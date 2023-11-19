@@ -1,0 +1,158 @@
+body {
+  background-color: #F0F2F5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #1B4965, #3D79A1);
+  color: #FFFFFF;
+}
+
+ a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .3s ease;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #FFFFFF;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+.randomizer-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #1B4965;
+}
+
+#random-order,
+#random-drink {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #1B4965;
+  color: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3D79A1;
+}
+
+#loading-icon {
+  display: none;
+  animation: spin 1s linear infinite;
+}
+
+#loading-text {
+  display: none;
+}
+
+#show-loading #loading-icon {
+  display: inline-block;
+}
+
+#show-loading #loading-text {
+  display: inline;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+footer {
+  padding: 40px;
+  text-align: center;
+  color: #777777;
+  background-color: #3D79A1;
+}
+
+#disclaimer {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+  
+  p {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+  
+  .randomizer-container {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #random-order,
+  #random-drink {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    font-size: 16px;
+  }
+  
+  footer {
+    padding: 20px;
+    font-size: 14px;
+  }
+}

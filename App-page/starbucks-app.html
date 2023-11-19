@@ -7,18 +7,20 @@
   <meta name="keywords" content="starbucks, randomizer, drink, coffee, starbucks food">
   <meta name="author" content="Jonah Kroll">
   <title>SipSurprise</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/app.css">
   <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" href="/assets/images/starbucks.png" type="image/x-icon">
   <!-- Include the necessary icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="theme-default">
+<body>
   <header>
     <div class="header-content">
       <h1>Welcome to SipSurprise!</h1>
     </div>
     <p>Are you feeling adventurous or just can't decide what to order at Starbucks today? Let the Randomizer help you discover something new!</p>
+
+    <a id="home" href="/Homepage/index.html">Home</a>
   </header>
 
   <main>
@@ -30,7 +32,6 @@
       <button id="drink-btn">Drink</button>
       <button id="reset-btn">Reset</button>
 
-      <!-- Add the spinning star icon for the loading animation -->
       <i id="loading-icon" class="fa-regular fa-star loading-icon"></i>
     </div>
   </main>
@@ -41,13 +42,6 @@
     <p id="disclaimer">*Some random items may not be available at all Starbucks locations*</p>
   </footer>
 
-  <script src="/js/script.js"></script>
-  <script src="/js/servicework.js"></script>
-  <script src="/js/test.js"></script>
-  <script src="/js/analytics.js"></script>
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="/js/app.js"></script>
 </body>
 </html>
