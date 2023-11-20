@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hide buttons and elements
     hideElements();
     loadingIcon.style.display = "inline-block";
+    orderDisplay.textContent = "";
 
     const sizes = getRandomDrinkSize();
     const randomDrink = getRandomDrink();
@@ -203,7 +204,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "Double Chocolaty Chip Creme Frappuccino Blended Beverage",
       "Matcha Creme Frappuccino Blended Beverage",
       "Vanilla Bean Creme Frappuccino Blended Beverage",
-      "White Chocolate Creme Frappuccino Blended Beverage"
+      "White Chocolate Creme Frappuccino Blended Beverage",
+      "Peppermint Mocha",
+      "Caramel Brulee Latte",
+      "Iced Gingerbread Oatmilk Chai",
+      "Iced Sugar Cookie Almondmilk Latte",
+      "Peppermint Mocha Frappuccino Blended Beverage",
+      "Signature Hot Chocolate"
     ];
 
     const randomIndex = Math.floor(Math.random() * drinkList.length);
@@ -213,9 +220,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function getRandomFood() {
     const foodList = [
+      "Chicken Maple Butter & Egg Sandwich",
       "Bacon, Sausage & Egg Wrap",
       "Impossible Breakfast Sandwich",
-      // Remaining food items...
+       "Bacon, Gouda & Egg Sandwich",
+       "Double-Smoked Bacon, Cheddar & Cheddar Egg Sandwich",
+       "Turkey Bacon, Cheddar & Cheddar Egg White Sandwich",
+       "Sausage, Cheddar Egg & Sandwich",
+       "Spinach, Feta & Egg White Wrap",
+       "Plain Bagel",
+       "Everything Bagel",
+       "Crispy Grilled Cheese on Sourdough",
+       "Ham & Swiss on Baguette",
+       "Turkey, Provolone & Pesto on Ciabatta",
+       "Tomato & Mozzarella on Focaccia",
+       "Berry Trio Parfait",
+       "Gingerbread Loaf",
+       "Peppermint Brownie Cake Pop"
     ];
 
     const randomFoodIndex = Math.floor(Math.random() * foodList.length);
@@ -228,6 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
      // Hide buttons and elements
      hideElements();
      loadingIcon.style.display = "inline-block";
+     drinkDisplay.textContent = "";
 
     const sizes = getRandomDrinkSize();
     const randomFood = getRandomFood();
