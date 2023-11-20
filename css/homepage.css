@@ -94,6 +94,38 @@ p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.featured-item a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.feature {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-color: #4d869f;
+}
+
+#order {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-color: #4d869f;
+}
+
+#order a {
+    color: white !important;
+    text-decoration: none;
+}
+
 .seasonal-menu {
     margin-top: 30px;
     text-align: center;
@@ -126,22 +158,19 @@ h3 {
 }
 
 .about-us-section button {
-    display: inline-block;
-    width: auto;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 20px;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
     cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 8px;
-    background-color: #4d869f; /* Greenish green background */
-    color: white; /* White text color */
+    transition: all .2s ease-in-out;
+    background-color: #4d869f;
 }
 
 .about-us-section a {
     color: #fff; /* Blue link color */
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Footer styles */
@@ -190,8 +219,22 @@ footer {
     z-index: 99;
     width: 80px;
     height: 80px;
-    border-radius: 9%;
+    border-radius: 50%;
     cursor: pointer;
-    transition: all .3s ease-in-out;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-}
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #F0F2F5;
+    border: 2px solid #1B4965;
+    outline: none;
+  }
+  
+  #back-to-top:hover {
+    background-color: #1B4965;
+    color: #FFFFFF;
+  }
+  
+  #back-to-top img {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+  }
