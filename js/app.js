@@ -247,6 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   randomizeBtn.addEventListener("click", function () {
      // Hide buttons and elements
+
      hideElements();
      loadingIcon.style.display = "inline-block";
      drinkDisplay.textContent = "";
@@ -267,4 +268,10 @@ document.addEventListener("DOMContentLoaded", function () {
     orderDisplay.textContent = ""; // Clear the text content
     drinkDisplay.textContent = ""; // Clear the text content
   });
+});
+
+const saveButtons = document.querySelectorAll('.save-btn');
+
+saveButtons.forEach((button) => {
+  button.addEventListener('click', saveOrder);
 });
